@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import Navbar from './components/navbar.jsx'
 
+import 'remixicon/fonts/remixicon.css'
+
 // Untuk Render Coding Di sini 
 
 createRoot(document.getElementById('root')).render(
