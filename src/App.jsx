@@ -1,5 +1,7 @@
 import Image from "./data.js"
 import { listTools,listProyek } from "./data.js"
+import { TypeAnimation } from "react-type-animation";
+
 
 function App() {
 
@@ -11,10 +13,22 @@ function App() {
           <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2sl">
             {/* image kecil */}
               <img src={Image.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy"/>
-              <q>Kode yang indah, lahir dari Ketekunan 👍</q>
+              <q>Errors are not failures, but real mistake is not trying </q>
           </div>
-          <h1 className="text-5xl/tight font-bold mb-6">Hi, I`m Sugeng Permana Desembry</h1>
-          <p className="text-base/loose mb-6 opacity-80">I focused on Web programing, Automation, and Cloud Console. when i building this project include landing page, company Profile, E-Commerce
+            <h1 className="text-5xl/tight font-bold mb-6">
+              Hi, I`m Sugeng Permana{"  "}
+              <TypeAnimation
+                sequence={[
+                  "Desembry", 3000,
+                  "...", 2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-violet-500"
+              />
+            </h1>
+          <p className="text-base/loose mb-6 opacity-80">"I Passionate about Web Development, Automation, and Cloud Engineering. My projects range from Landing Pages to Company Profiles and E-Commerce platforms"
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-white hover:text-black" >Download Cv <i className="ri-download-line ri-lg"></i></a>

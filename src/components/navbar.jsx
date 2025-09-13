@@ -1,44 +1,203 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("beranda");
 
   useEffect(() => {
-    const handlescroll = () => {
-      if(window.scrollY > 150) {
+    const handleScroll = () => {
+      // navbar blur
+      if (window.scrollY > 150) {
         setActive(true);
       } else {
         setActive(false);
       }
+
+      // scroll spy
+      const sections = ["beranda", "tentang", "experience", "proyek", "skills", "contact"];
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(id);
+          }
+        }
+      });
     };
 
-    window.addEventListener("scroll", handlescroll);
-    return () => {
-      window.removeEventListener("scroll", handlescroll);
-    };
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
-    <div className="navbar py-7 flex items-center justify-between">
+    <div
+      className={`navbar py-5 flex items-center justify-between fixed top-0 left-0 w-full px-6 z-50 transition-all ${
+        active ? "backdrop-blur-md border-b border-zinc-700" : "bg-transparent"
+      }`}
+    >
+      {/* logo */}
       <div className="logo">
-        <h1 className="text-4xl font-bold bg-white text-black p-1 md:bg-transparent  md:text-white">Portfolio</h1>
+        <h1 className="text-base lg:text-lg font-bold text-white">
+          Sugeng Permana Desembry
+        </h1>
       </div>
-      <ul className={`menu flex items-center sm:gap-10 gap-4 fixed md:static left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40 ${active ? "top-0 opacity-100" : "top-0 opacity-0"}`}>
+
+      {/* desktop menu */}
+      <ul className="hidden lg:flex items-center gap-10">
         <li>
-          <a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a>
+          <a
+            href="#beranda"
+            className={`hover:text-blue-400 ${
+              activeSection === "beranda" ? "text-blue-400" : ""
+            }`}
+          >
+            Home
+          </a>
         </li>
         <li>
-          <a href="#tentang" className="sm:text-lg text-base font-medium">Tentang</a>
+          <a
+            href="#tentang"
+            className={`hover:text-blue-400 ${
+              activeSection === "tentang" ? "text-blue-400" : ""
+            }`}
+          >
+            About
+          </a>
         </li>
         <li>
-          <a href="#proyek" className="sm:text-lg text-base font-medium">Proyek</a>
+          <a
+            href="#experience"
+            className={`hover:text-blue-400 ${
+              activeSection === "experience" ? "text-blue-400" : ""
+            }`}
+          >
+            Experience
+          </a>
         </li>
         <li>
-          <a href="#contact" className="sm:text-lg text-base font-medium">Contact</a>
+          <a
+            href="#proyek"
+            className={`hover:text-blue-400 ${
+              activeSection === "proyek" ? "text-blue-400" : ""
+            }`}
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="#skills"
+            className={`hover:text-blue-400 ${
+              activeSection === "skills" ? "text-blue-400" : ""
+            }`}
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className={`hover:text-blue-400 ${
+              activeSection === "contact" ? "text-blue-400" : ""
+            }`}
+          >
+            Contact
+          </a>
         </li>
       </ul>
 
-    </div>
-  )
-}
+      {/* hamburger icon */}
+      <div
+        className="lg:hidden text-white text-3xl cursor-pointer"
+        onClick={toggleMenu}
+      >
+        {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
+      </div>
 
-export default Navbar
+      {/* mobile menu */}
+      <div
+        className={`fixed top-0 left-0 h-full w-2/3 bg-transparent text-white transform ${
+          openMenu ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out z-40 backdrop-blur-md`}
+      >
+        <ul className="flex flex-col items-start gap-6 p-6 mt-16">
+          <li>
+            <a
+              href="#beranda"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "beranda" ? "text-blue-400" : ""
+              }`}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#tentang"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "tentang" ? "text-blue-400" : ""
+              }`}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experience"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "experience" ? "text-blue-400" : ""
+              }`}
+            >
+              Experience
+            </a>
+          </li>
+          <li>
+            <a
+              href="#proyek"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "proyek" ? "text-blue-400" : ""
+              }`}
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "skills" ? "text-blue-400" : ""
+              }`}
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onClick={toggleMenu}
+              className={`hover:text-blue-400 ${
+                activeSection === "contact" ? "text-blue-400" : ""
+              }`}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

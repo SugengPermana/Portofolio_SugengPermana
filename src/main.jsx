@@ -9,6 +9,7 @@ import Footer from './components/footer.jsx'
 import Prelooder from './components/Prelooder.jsx'
 import 'animate.css';
 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
