@@ -22,18 +22,18 @@ const Navbar = () => {
       <div className="logo">
         <h1 className="text-4xl font-bold bg-white text-black p-1 md:bg-transparent  md:text-white">Portfolio</h1>
       </div>
-      <ul className={`menu flex items-center sm:gap-10 gap-4 fixed md:static left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none ${active ? "top-0 opacity-100" : "top-0 opacity-0"}`}>
+      <ul className={`menu flex items-center sm:gap-10 gap-4 fixed md:static left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 bg-white/30 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40 ${active ? "top-0 opacity-100" : "top-0 opacity-0"}`}>
         <li>
-          <a href="#" className="sm:text-lg text-base font-medium">Beranda</a>
+          <a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a>
         </li>
         <li>
-          <a href="#" className="sm:text-lg text-base font-medium">Tentang</a>
+          <a href="#tentang" className="sm:text-lg text-base font-medium">Tentang</a>
         </li>
         <li>
-          <a href="#" className="sm:text-lg text-base font-medium">Proyek</a>
+          <a href="#proyek" className="sm:text-lg text-base font-medium">Proyek</a>
         </li>
         <li>
-          <a href="#" className="sm:text-lg text-base font-medium">Contact</a>
+          <a href="#contact" className="sm:text-lg text-base font-medium">Contact</a>
         </li>
       </ul>
 
