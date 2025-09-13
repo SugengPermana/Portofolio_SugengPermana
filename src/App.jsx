@@ -23,7 +23,7 @@ function App() {
           </div>
         </div>
             {/* Image besar */}
-              <img src={Image.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s" loading="lazy" />
+              <img src={Image.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s rounded-3xl" loading="lazy" />
       </div>
       {/* Hero section */}
 
