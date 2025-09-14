@@ -12,43 +12,47 @@ function App() {
   <img
     src={Image.HeroImage}
     alt="Profile"
-    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full object-cover border-4 border-violet-600 shadow-lg"
+    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full object-cover border-4 border-violet-600 shadow-lg " data-aos="fade-up" data-aos-duration="1000"
     loading="lazy"
   />
 
   {/* Nama */}
   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold 
-    mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2">
+    mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
     Hi, I&apos;m <span className="text-violet-500">Sugeng</span>
   </h1>
 
   {/* Subtitle + titik animasi */}
-  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1">
+  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
     Front-End Engineer & Workflow Automation
-    <span className="animate-pulse">.</span>
   </h2>
 
   {/* Deskripsi */}
-  <p className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 mb-8 leading-relaxed">
+  <p className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="2000">
     I&apos;m passionate about Web Development, Automation, and Cloud Engineering.
     My projects range from Landing Pages to Company Profiles and E-Commerce platforms.
   </p>
 
   {/* Tombol CTA */}
-  <div className="flex gap-4 flex-wrap justify-center mb-8">
-    <a
-      href="#tentang"
-      className="bg-violet-700 px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg rounded-xl transition transform hover:scale-105 hover:shadow-lg"
-    >
-      About Me
-    </a>
-    <a
-      href="#proyek"
-      className="px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg rounded-xl border-2 border-violet-600 text-violet-500 bg-transparent transition hover:bg-violet-600 hover:text-white"
-    >
-      View My Work
-    </a>
-  </div>
+  <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+  {/* About Me (tetap fix, ga ikut memanjang) */}
+  <a
+    href="#tentang"
+    className="bg-violet-700 px-6 py-3 text-sm sm:text-base md:text-lg rounded-full text-center whitespace-nowrap w-auto min-w-[120px] transition transform hover:scale-105 hover:shadow-lg"
+  >
+    About Me
+  </a>
+
+  {/* View My Work (lebih panjang di mobile) */}
+  <a
+    href="#proyek"
+    className="px-8 py-3 text-sm sm:text-base md:text-lg rounded-full border-2 border-violet-600 text-violet-500 bg-transparent text-center whitespace-nowrap w-[180px] sm:w-auto transition hover:bg-violet-600 hover:text-white"
+  >
+    View My Work
+  </a>
+</div>
+
+
 
   {/* Sosial Media */}
   <div className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-zinc-400">
@@ -73,7 +77,7 @@ function App() {
           <div className="xl:w-2/3 lg:w3/4 w-full mx-auto p-7 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <img src={Image.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy" />
             <p className="text-base/loose mb-10">
-              Hi, My name is Sugeng Permana Desembry, saya seorang junior fullstack engineer, keahlian saya menggunakan bahasa HTML,Css,JS dan untuk framework React, Tailwind, Next.js  
+              Hi, My name is Sugeng Permana Desembry, saya seorang junior fullstack engineer, keahlian saya menggunakan bahasa HTML,Css,JS dan untuk framework React, Tailwind, Next.js 
             </p>
             <div className="flex items-center justify-between">
               <img src={Image.HeroImage} alt="image" className="w-12 rounded-md sm:block hidden" loading="lazy" />
