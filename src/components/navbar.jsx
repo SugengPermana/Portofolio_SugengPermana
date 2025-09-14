@@ -8,29 +8,34 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // navbar blur
-      if (window.scrollY > 150) {
-        setActive(true);
-      } else {
-        setActive(false);
-      }
+    const offset = 120; // tinggi navbar kira2
+    const scrollPos = window.scrollY + offset;
 
-      // scroll spy
-      const sections = ["beranda", "tentang", "experience", "proyek", "skills", "contact"];
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(id);
-          }
+    const sections = ["beranda", "tentang", "experience", "proyek", "skills", "contact"];
+    let currentSection = "beranda";
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) {
+        if (scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
+          currentSection = id;
         }
-      });
-    };
+      }
+    });
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setActiveSection(currentSection);
+
+    // blur effect
+    if (window.scrollY > 150) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -125,7 +130,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 left-0 h-full w-2/3 bg-transparent text-white transform ${
           openMenu ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40 backdrop-blur-md`}
+        } transition-transform duration-300 ease-in-out z-40 `}
       >
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
           <li>
