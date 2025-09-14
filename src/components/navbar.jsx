@@ -49,10 +49,16 @@ const Navbar = () => {
     >
       {/* logo */}
       <div className="logo">
-        <h1 className="text-base lg:text-lg font-bold text-white">
-          Sugeng Permana Desembry
-        </h1>
-      </div>
+  <h1
+    className="font-bold text-white 
+    text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl 
+    whitespace-nowrap"
+  >
+    <span className="block sm:hidden">Sugeng</span>
+    <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
+    <span className="hidden lg:block">Sugeng Permana Desembry</span>
+  </h1>
+</div>
 
       {/* desktop menu */}
       <ul className="hidden lg:flex items-center gap-10">

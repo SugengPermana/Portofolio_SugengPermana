@@ -7,38 +7,65 @@ function App() {
 
   return (
     <>
-    {/* Hero Section */}
-      <div className="hero grid md:grid-cols-2 pt-10 items-center xl:gap-0 gap-6 grid-cols-1">
-        <div className="animate__animated animate__fadeInUp animate__delay-3s">
-          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2sl">
-            {/* image kecil */}
-              <img src={Image.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy"/>
-              <q>Errors are not failures, but real mistake is not trying </q>
-          </div>
-            <h1 className="text-5xl/tight font-bold mb-6">
-              Hi, I`m Sugeng Permana{"  "}
-              <TypeAnimation
-                sequence={[
-                  "Desembry", 3000,
-                  "...", 2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-                className="text-violet-500"
-              />
-            </h1>
-          <p className="text-base/loose mb-6 opacity-80">"I Passionate about Web Development, Automation, and Cloud Engineering. My projects range from Landing Pages to Company Profiles and E-Commerce platforms"
-          </p>
-          <div className="flex items-center sm:gap-4 gap-2">
-            <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-white hover:text-black" >Download Cv <i className="ri-download-line ri-lg"></i></a>
+    <div className="hero mt-12 min-h-screen flex flex-col justify-center items-center text-center px-6">
+  {/* Foto Profil */}
+  <img
+    src={Image.HeroImage}
+    alt="Profile"
+    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full object-cover border-4 border-violet-600 shadow-lg"
+    loading="lazy"
+  />
 
-            <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-white hover:text-black">Lihat Proyek <i className="ri-download-line ri-lg"></i></a>
-          </div>
-        </div>
-            {/* Image besar */}
-              <img src={Image.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s rounded-3xl" loading="lazy" />
-      </div>
+  {/* Nama */}
+  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold 
+    mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2">
+    Hi, I&apos;m <span className="text-violet-500">Sugeng</span>
+  </h1>
+
+  {/* Subtitle + titik animasi */}
+  <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1">
+    Front-End Engineer & Workflow Automation
+    <span className="animate-pulse">.</span>
+  </h2>
+
+  {/* Deskripsi */}
+  <p className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 mb-8 leading-relaxed">
+    I&apos;m passionate about Web Development, Automation, and Cloud Engineering.
+    My projects range from Landing Pages to Company Profiles and E-Commerce platforms.
+  </p>
+
+  {/* Tombol CTA */}
+  <div className="flex gap-4 flex-wrap justify-center mb-8">
+    <a
+      href="#tentang"
+      className="bg-violet-700 px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg rounded-xl transition transform hover:scale-105 hover:shadow-lg"
+    >
+      About Me
+    </a>
+    <a
+      href="#proyek"
+      className="px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg rounded-xl border-2 border-violet-600 text-violet-500 bg-transparent transition hover:bg-violet-600 hover:text-white"
+    >
+      View My Work
+    </a>
+  </div>
+
+  {/* Sosial Media */}
+  <div className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-zinc-400">
+    <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition transform hover:scale-110">
+      <i className="ri-linkedin-fill"></i>
+    </a>
+    <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition transform hover:scale-110">
+      <i className="ri-github-fill"></i>
+    </a>
+    <a href="mailto:sugengpermanadesembry@gmail.com" className="hover:text-violet-500 transition transform hover:scale-110">
+      <i className="ri-mail-fill"></i>
+    </a>
+    <a href="https://www.instagram.com/username" target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition transform hover:scale-110">
+      <i className="ri-instagram-fill"></i>
+    </a>
+  </div>
+</div>
       {/* Hero section */}
 
       {/* Tentang */}
