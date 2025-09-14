@@ -69,53 +69,128 @@ function App() {
       <i className="ri-instagram-fill"></i>
     </a>
   </div>
+    {/* Arrow animasi */}
+  <a
+    href="#tentang"
+    className="mt-10 text-violet-500 text-4xl animate-bounce"
+  >
+    <i className="ri-arrow-down-s-line"></i>
+  </a>
 </div>
-      {/* Hero section */}
+      {/* Hero section ---------------- */}
 
-      {/* Tentang */}
-        <div className="tentang mt-32 py-10" id="tentang">
-          <div className="xl:w-2/3 lg:w3/4 w-full mx-auto p-7 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-            <img src={Image.HeroImage} alt="Image" className="w-12 rounded-md mb-10 sm:hidden" loading="lazy" />
-            <p className="text-base/loose mb-10">
-              Hi, My name is Sugeng Permana Desembry, saya seorang junior fullstack engineer, keahlian saya menggunakan bahasa HTML,Css,JS dan untuk framework React, Tailwind, Next.js 
-            </p>
-            <div className="flex items-center justify-between">
-              <img src={Image.HeroImage} alt="image" className="w-12 rounded-md sm:block hidden" loading="lazy" />
-              <div className="flex items-center gap-6">
-                <div>
-                  <h1 className="text-4xl mb-1">
-                    45<span className="text-violet-500">+</span>
-                  </h1>
-                  <p>Project Selesai</p>
-                </div>
-                <div>
-                  <h1 className="text-4xl mb-1">
-                    4<span className="text-violet-500">+</span>
-                  </h1>
-                  <p>Tahun Pengalaman</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* About Me ------------ */}
+        <div className="tentang mt-32 py-10 px-5" id="tentang">
+  <div className="max-w-screen-lg mx-auto">
+    {/* Judul Section */}
+    <div className="text-center mb-14">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        About <span className="text-violet-500">Me</span>
+      </h2>
+      <p className="text-zinc-400 mt-3 text-base sm:text-lg" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+        A brief introduction about who I am and what I do
+      </p>
+    </div>
 
-          <div className="tools mt-32">
-            <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tools yang dipakai</h1>
-            <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut ini tools yang biasa saya pakai untuk ngoding</p>
-            <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
+    {/* Konten Utama */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4 sm:px-6 lg:px-16 xl:px-24 mx-auto max-w-7xl">
+  {/* Teks */}
+  <div>
+    <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      Hi, There I&apos;m <span className="text-violet-500">Sugeng</span>
+    </h3>
+    <p className="text-zinc-400 mb-5" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true">
+      I&apos;m passionate about building modern, responsive, and
+      user-friendly web applications. Always learning and exploring
+      new technologies.
+    </p>
 
-              {listTools.map(tool => (
-                <div className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true">
-                  <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900" />
-                <div>
-                  <h4 className="font-bold">{tool.nama}</h4>
-                  <p className="opacity-50">{tool.ket}</p>
-                </div>
-              </div>
-                ))}
+    <h4 className="text-xl font-semibold mb-3 text-white" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      What I Do:
+    </h4>
+    <p className="text-zinc-400" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true">
+      Specializing in React, Tailwind CSS, and Next.js to craft
+      smooth experiences for the web.
+    </p>
+  </div>
 
-            </div>
-          </div>
-        </div>
+  {/* Foto */}
+  <div className="flex justify-center lg:justify-end" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" >
+    <img
+      src={Image.HeroImage}
+      alt="Sugeng Permana Desembry"
+      className="w-48 sm:w-64 rounded-xl shadow-lg"
+      loading="lazy"
+    />
+  </div>
+</div>
+
+
+    {/* Cards Statistik */}
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 justify-items-center">
+  {/* Card 1 */}
+  <div className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+      transition transform hover:scale-105 hover:shadow-lg 
+      hover:shadow-violet-500/30 w-full max-w-[250px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+    <div className="flex justify-center mb-4">
+      <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+        <i className="ri-timer-fill text-white text-2xl"></i>
+      </div>
+    </div>
+    <h1 className="text-3xl font-bold text-white mb-2">
+      7<span className="text-violet-500">+</span>
+    </h1>
+    <p className="text-zinc-400">Month Experience</p>
+  </div>
+
+  {/* Card 2 */}
+  <div className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+        transition transform hover:scale-105 hover:shadow-lg 
+        hover:shadow-violet-500/30 w-full max-w-[250px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+    <div className="flex justify-center mb-4">
+      <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+        <i className="ri-focus-2-line text-white text-2xl"></i>
+      </div>
+    </div>
+    <h1 className="text-3xl font-bold text-white mb-2">
+      3<span className="text-violet-500">+</span>
+    </h1>
+    <p className="text-zinc-400">Projects Completed</p>
+  </div>
+
+  {/* Card 3 */}
+  <div className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+                  transition transform hover:scale-105 hover:shadow-lg 
+                  hover:shadow-violet-500/30 w-full max-w-[250px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+    <div className="flex justify-center mb-4">
+      <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+        <i className="ri-stack-fill text-white text-2xl"></i>
+      </div>
+    </div>
+    <h1 className="text-3xl font-bold text-white mb-2">
+      5<span className="text-violet-500">+</span>
+    </h1>
+    <p className="text-zinc-400">Technologies Mastered</p>
+  </div>
+
+  {/* Card 4 */}
+  <div className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+                  transition transform hover:scale-105 hover:shadow-lg 
+                  hover:shadow-violet-500/30 w-full max-w-[250px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-once="true">
+    <div className="flex justify-center mb-4">
+      <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+        <i className="ri-user-fill text-white text-2xl"></i>
+      </div>
+    </div>
+    <h1 className="text-3xl font-bold text-white mb-2">
+      1<span className="text-violet-500">+</span>
+    </h1>
+    <p className="text-zinc-400">Clients Worked With</p>
+  </div>
+</div>
+  </div>
+</div>
       {/* Tentang */}
 
       {/* Proyek */}
@@ -145,6 +220,26 @@ function App() {
         </div>
       </div>
       {/* Proyek */}
+
+      {/* skills */}
+          <div className="tools mt-32">
+            <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tools yang dipakai</h1>
+            <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut ini tools yang biasa saya pakai untuk ngoding</p>
+            <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
+
+              {listTools.map(tool => (
+                <div className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true">
+                  <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900" />
+                <div>
+                  <h4 className="font-bold">{tool.nama}</h4>
+                  <p className="opacity-50">{tool.ket}</p>
+                </div>
+              </div>
+                ))}
+
+            </div>
+          </div>
+          {/* skills */}
 
       {/* kontak */}
       <div className="kontak mt-32 sm:p-10 p-0" id="contact">
