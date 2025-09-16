@@ -425,65 +425,126 @@ function App() {
         </div>
       </div>
 
-      {/* Proyek */}
-      <div className="proyek mt-32 py-10" id="proyek">
-        <h1
-          className="text-center text-4xl font-bold mb-2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          Proyek
-        </h1>
-        <p
-          className="text-base/loose text-center opacity-50"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          data-aos-once="true"
-        >
-          Berikut ini beebrapa proyek yang telah saya buat
-        </p>
+      {/* Proyek ------------*/}
+      <div className="proyek mt-32 py-10">
+  <h1 className="text-center text-4xl font-bold mb-2 text-white">
+    My <span className="text-violet-500">Projects</span>
+  </h1>
+  <p className="text-base/loose text-center opacity-50 mb-12">
+    Berikut ini beberapa proyek yang telah saya buat
+  </p>
 
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map((proyek) => (
-            <div
-              className="p-4 bg-zinc-800 rounded-md"
-              key={proyek.id}
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay={proyek.dad}
-              data-aos-once="true"
-            >
-              <img src={proyek.gambar} alt="Proyek image" loading="lazy" />
-              <div>
-                <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-                <p className="text-base/loose mb-4">{proyek.desk}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {proyek.tools.map((tool, index) => (
-                    <p
-                      className="py-1 px-3 border border-zinc-800 bg-zinc-600 rounded-md font-semibold "
-                      key={index}
-                    >
-                      {tool}
-                    </p>
-                  ))}
-                </div>
-                <div className="mt-8 text-center">
-                  <a
-                    href="#"
-                    className="bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600"
-                  >
-                    Lihat Website
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Card 1 */}
+    <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
+      <div className="relative w-full h-48 sm:h-56 overflow-hidden">
+        <img
+          src="/assets/proyek/proyek1.webp"
+          alt="Web Sekolah"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
+            Web Development
+          </span>
         </div>
       </div>
-      {/* Proyek */}
+      <div className="p-4 flex flex-col">
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
+          Web Sekolah
+        </h3>
+        <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
+          Website untuk sekolah berbasis HTML, CSS, dan Javascript.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-3">
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            HTML
+          </span>
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            CSS
+          </span>
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            Javascript
+          </span>
+        </div>
+        <div className="flex items-center gap-4">
+          <a
+            href="#"
+            target="_blank"
+            className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
+          >
+            <i className="ri-external-link-line text-sm sm:text-base"></i>
+            <span>Live Demo</span>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
+          >
+            <i className="ri-github-line text-sm sm:text-base"></i>
+            <span>Github</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
+      <div className="relative w-full h-48 sm:h-56 overflow-hidden">
+        <img
+          src="/assets/proyek/proyek2.webp"
+          alt="Company Profile"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
+            Web Development
+          </span>
+        </div>
+      </div>
+      <div className="p-4 flex flex-col">
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
+          Company Profile
+        </h3>
+        <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
+          Website company profile modern dengan HTML, CSS, Javascript.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-3">
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            HTML
+          </span>
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            CSS
+          </span>
+          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
+            Javascript
+          </span>
+        </div>
+        <div className="flex items-center gap-4">
+          <a
+            href="#"
+            target="_blank"
+            className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
+          >
+            <i className="ri-external-link-line text-sm sm:text-base"></i>
+            <span>Live Demo</span>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
+          >
+            <i className="ri-github-line text-sm sm:text-base"></i>
+            <span>Github</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    {/* Tambahin Card 3 dst sesuai kebutuhan */}
+  </div>
+</div>
+
+      {/* Proyek ------------------------*/}
 
       {/* skills */}
       <div className="tools mt-32">

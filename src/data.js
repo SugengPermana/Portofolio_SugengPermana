@@ -109,9 +109,11 @@ export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
+    nama: "Simpadu",
+    desk: "menagament employee apps and attendance",
     tools: ["HTML", "CSS", "Javascript", "AOS"],
+    live: "https://website-sekolah.example.com",
+    github: "https://github.com/username/website-sekolah",
     dad: "200",
   },
   {
@@ -120,6 +122,8 @@ export const listProyek = [
     nama: "Company Profile",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    live: "https://company-profile.example.com",
+    github: "https://github.com/username/company-profile",
     dad: "300",
   },
   {
@@ -128,6 +132,8 @@ export const listProyek = [
     nama: "Web Pernikahan 2.0",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    live: "https://web-pernikahan2.example.com",
+    github: "https://github.com/username/web-pernikahan2",
     dad: "400",
   },
   {
@@ -136,6 +142,8 @@ export const listProyek = [
     nama: "Website Course",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+    live: "https://website-course.example.com",
+    github: "https://github.com/username/website-course",
     dad: "500",
   },
   {
@@ -144,6 +152,8 @@ export const listProyek = [
     nama: "Web Portfolio",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
+    live: "https://portfolio.example.com",
+    github: "https://github.com/username/portfolio",
     dad: "600",
   },
   {
@@ -152,6 +162,8 @@ export const listProyek = [
     nama: "Company Profile 2.0",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["NextJS", "TailwindCSS", "Framermotion"],
+    live: "https://company-profile2.example.com",
+    github: "https://github.com/username/company-profile2",
     dad: "700",
   },
 ];
