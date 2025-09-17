@@ -1,116 +1,17 @@
-import HeroImage from "/assets/hero-foto-img3.jpg";
+// src/data.js
 
 const Image = {
-  HeroImage,
+  HeroImage: "/assets/hero-foto-img3.jpg",
 };
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
-
-export const listTools = [
-  {
-    id: 1,
-    gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
-    dad: "100",
-  },
-  {
-    id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "200",
-  },
-  {
-    id: 3,
-    gambar: Tools3,
-    nama: "Next JS",
-    ket: "Framework",
-    dad: "300",
-  },
-  {
-    id: 4,
-    gambar: Tools4,
-    nama: "Tailwind CSS",
-    ket: "Framework",
-    dad: "400",
-  },
-  {
-    id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
-    ket: "Framework",
-    dad: "500",
-  },
-  {
-    id: 6,
-    gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
-    dad: "600",
-  },
-  {
-    id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Javascript Runtime",
-    dad: "700",
-  },
-  {
-    id: 8,
-    gambar: Tools8,
-    nama: "Github",
-    ket: "Repository",
-    dad: "800",
-  },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
-  {
-    id: 10,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
-    dad: "1000",
-  },
-  {
-    id: 11,
-    gambar: Tools11,
-    nama: "Figma",
-    ket: "Design App",
-    dad: "1100",
-  },
-];
-
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
-
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1,
+    gambar: "/assets/proyek/proyek1.webp",
     nama: "Simpadu",
-    desk: "menagament employee apps and attendance",
+    desk: "Management employee apps and attendance",
     tools: ["HTML", "CSS", "Javascript", "AOS"],
     live: "https://website-sekolah.example.com",
     github: "https://github.com/username/website-sekolah",
@@ -118,7 +19,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    gambar: Proyek2,
+    gambar: "/assets/proyek/proyek2.webp",
     nama: "Company Profile",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
@@ -126,44 +27,39 @@ export const listProyek = [
     github: "https://github.com/username/company-profile",
     dad: "300",
   },
+  // dst...
+];
+
+// ===================== SKILLS =====================
+
+export const skillCategories = [
+  {
+    id: 1,
+    title: "Frontend Development",
+    skills: [
+      { id: "react", name: "React", percent: 80, color: "#61DAFB", logo: "/assets/tools/reactjs.png" },
+      { id: "nextjs", name: "Next.js", percent: 70, color: "#000000", logo: "/assets/tools/nextjs.png" },
+      { id: "tailwind", name: "TailwindCSS", percent: 90, color: "#38BDF8", logo: "/assets/tools/tailwind.png" },
+      { id: "bootstrap", name: "Bootstrap", percent: 60, color: "#7952B3", logo: "/assets/tools/bootstrap.png" },
+      { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: "/assets/tools/js.png" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Backend Development",
+    skills: [
+      { id: "node", name: "Node.js", percent: 75, color: "#339933", logo: "/assets/tools/nodejs.png" },
+      { id: "express", name: "Express.js", percent: 70, color: "#FFFFFF", logo: "/assets/tools/express.png" },
+      { id: "mongo", name: "MongoDB", percent: 65, color: "#47A248", logo: "/assets/tools/mongodb.png" },
+    ],
+  },
   {
     id: 3,
-    gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
-    live: "https://web-pernikahan2.example.com",
-    github: "https://github.com/username/web-pernikahan2",
-    dad: "400",
-  },
-  {
-    id: 4,
-    gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
-    live: "https://website-course.example.com",
-    github: "https://github.com/username/website-course",
-    dad: "500",
-  },
-  {
-    id: 5,
-    gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
-    live: "https://portfolio.example.com",
-    github: "https://github.com/username/portfolio",
-    dad: "600",
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    live: "https://company-profile2.example.com",
-    github: "https://github.com/username/company-profile2",
-    dad: "700",
+    title: "Tools & DevOps",
+    skills: [
+      { id: "github", name: "Git & GitHub", percent: 85, color: "#F05032", logo: "/assets/tools/github.png" },
+      { id: "docker", name: "Docker", percent: 60, color: "#2496ED", logo: "/assets/tools/docker.png" },
+      { id: "gcp", name: "Google Cloud", percent: 70, color: "#4285F4", logo: "/assets/tools/googlecloud.png" },
+    ],
   },
 ];

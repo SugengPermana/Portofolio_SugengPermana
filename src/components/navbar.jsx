@@ -6,13 +6,33 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
+  const handleScrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navHeight = document.querySelector(".navbar")?.offsetHeight || 100;
+    const top = el.offsetTop - navHeight; // offset supaya tidak tertutup navbar
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
+
+  // Smooth scroll ke section dengan offset navbar
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 100;
+
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - navbarHeight,
+        behavior: "smooth",
+      });
+      setOpenMenu(false); // tutup menu mobile
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      // hitung offset dinamis dari tinggi navbar (bikin threshold lebih akurat)
-      const navEl = document.querySelector(".navbar");
-      const offset = (navEl?.offsetHeight ?? 120) + 10; // +10 untuk safety
-      const scrollPos = window.scrollY + offset;
-
       const sections = [
         "home",
         "about",
@@ -21,33 +41,26 @@ const Navbar = () => {
         "skills",
         "contact",
       ];
-      let current = sections[0]; // default to first
+      const scrollPos = window.scrollY + 150; // threshold untuk highlight
 
+      let current = sections[0];
       sections.forEach((id) => {
         const el = document.getElementById(id);
-        if (!el) return;
-        if (el.offsetTop <= scrollPos) {
-          current = id; // keep last matched section
-        }
+        if (el && el.offsetTop <= scrollPos) current = id;
       });
 
       setActiveSection(current);
-      setActive(window.scrollY > 150);
+      setActive(window.scrollY > 50);
     };
 
-    // run once on mount to set initial state
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll); // recalc on resize
+    window.addEventListener("resize", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
   }, []);
-
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
-  };
 
   return (
     <div
@@ -55,164 +68,62 @@ const Navbar = () => {
         active ? "backdrop-blur-md border-b border-zinc-700" : "bg-transparent"
       }`}
     >
-      {/* logo */}
+      {/* Logo */}
       <div className="logo">
-        <h1
-          className="font-bold text-white 
-    text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl 
-    whitespace-nowrap"
-        >
+        <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
           <span className="block sm:hidden">Sugeng</span>
           <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
           <span className="hidden lg:block">Sugeng Permana Desembry</span>
         </h1>
       </div>
 
-      {/* desktop menu */}
+      {/* Desktop Menu */}
       <ul className="hidden lg:flex items-center gap-10">
-        <li>
-          <a
-            href="#home"
-            className={`hover:text-blue-400 ${
-              activeSection === "home" ? "text-blue-400" : ""
-            }`}
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            className={`hover:text-blue-400 ${
-              activeSection === "about" ? "text-blue-400" : ""
-            }`}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#experience"
-            className={`hover:text-blue-400 ${
-              activeSection === "experience" ? "text-blue-400" : ""
-            }`}
-          >
-            Experience
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            className={`hover:text-blue-400 ${
-              activeSection === "projects" ? "text-blue-400" : ""
-            }`}
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            href="#skills"
-            className={`hover:text-blue-400 ${
-              activeSection === "skills" ? "text-blue-400" : ""
-            }`}
-          >
-            Skills
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            className={`hover:text-blue-400 ${
-              activeSection === "contact" ? "text-blue-400" : ""
-            }`}
-          >
-            Contact
-          </a>
-        </li>
+        {["home", "about", "experience", "projects", "skills", "contact"].map(
+          (sec) => (
+            <li key={sec}>
+              <button
+                onClick={() => scrollToSection(sec)}
+                className={`hover:text-blue-400 ${
+                  activeSection === sec ? "text-blue-400" : ""
+                }`}
+              >
+                {sec.charAt(0).toUpperCase() + sec.slice(1)}
+              </button>
+            </li>
+          )
+        )}
       </ul>
 
-      {/* hamburger icon */}
+      {/* Hamburger */}
       <div
         className="lg:hidden text-white text-3xl cursor-pointer"
-        onClick={toggleMenu}
+        onClick={() => setOpenMenu(!openMenu)}
       >
         {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
       </div>
 
-      {/* mobile menu */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-2/3 bg-transparent text-white transform ${
+        className={`fixed top-0 left-0 h-full w-2/3 bg-zinc-900 text-white transform ${
           openMenu ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40 `}
+        } transition-transform duration-300 ease-in-out z-40`}
       >
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
-          <li>
-            <a
-              href="#home"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "home" ? "text-blue-400" : ""
-              }`}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "about" ? "text-blue-400" : ""
-              }`}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "experience" ? "text-blue-400" : ""
-              }`}
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "projects" ? "text-blue-400" : ""
-              }`}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "skills" ? "text-blue-400" : ""
-              }`}
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={toggleMenu}
-              className={`hover:text-blue-400 ${
-                activeSection === "contact" ? "text-blue-400" : ""
-              }`}
-            >
-              Contact
-            </a>
-          </li>
+          {["home", "about", "experience", "projects", "skills", "contact"].map(
+            (sec) => (
+              <li key={sec}>
+                <button
+                  onClick={() => scrollToSection(sec)}
+                  className={`hover:text-blue-400 ${
+                    activeSection === sec ? "text-blue-400" : ""
+                  }`}
+                >
+                  {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                </button>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </div>

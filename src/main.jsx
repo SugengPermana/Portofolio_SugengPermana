@@ -23,7 +23,7 @@ function Main() {
   }, []);
 
   if (loading) {
-    return <Preloader />; // tampil preloader dulu
+    return <Preloader />; 
   }
 
   return (
