@@ -18,8 +18,7 @@ function App() {
 
         {/* Nama */}
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold 
-    mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2"
           data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-once="true"
@@ -27,9 +26,9 @@ function App() {
           Hi, I&apos;m <span className="text-violet-500">Sugeng</span>
         </h1>
 
-        {/* Subtitle + titik animasi */}
+        {/* Subtitle */}
         <h2
-          className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1"
+          className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-3xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1"
           data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-once="true"
@@ -39,7 +38,8 @@ function App() {
 
         {/* Deskripsi */}
         <p
-          className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 mb-8 leading-relaxed"
+          className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 
+          text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl text-zinc-300 mb-8 leading-relaxed"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
