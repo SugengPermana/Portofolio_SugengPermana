@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 function App() {
   return (
     <>
-      <div className="hero mt-12 min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <div id="home" className="hero mt-12 min-h-screen flex flex-col justify-center items-center text-center px-6 scroll-mt-14">
         {/* Foto Profil */}
         <img
           src={Image.HeroImage}
@@ -52,7 +52,7 @@ function App() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           {/* About Me (tetap fix, ga ikut memanjang) */}
           <a
-            href="#tentang"
+            href="#home"
             className="bg-violet-700 px-6 py-3 text-sm sm:text-base md:text-lg rounded-full text-center whitespace-nowrap w-auto min-w-[120px] transition transform hover:scale-105 hover:shadow-lg"
           >
             About Me
@@ -60,7 +60,7 @@ function App() {
 
           {/* View My Work (lebih panjang di mobile) */}
           <a
-            href="#proyek"
+            href="#projects"
             className="px-8 py-3 text-sm sm:text-base md:text-lg rounded-full border-2 border-violet-600 text-violet-500 bg-transparent text-center whitespace-nowrap w-[180px] sm:w-auto transition hover:bg-violet-600 hover:text-white"
           >
             View My Work
@@ -111,7 +111,7 @@ function App() {
       {/* Hero section ---------------- */}
 
       {/* About Me ------------ */}
-      <div className="tentang mt-32 py-10 px-5" id="tentang">
+      <div className="about mt-32 py-10 px-5 scroll-mt-14" id="about">
         <div className="max-w-screen-lg mx-auto">
           {/* Judul Section */}
           <div className="text-center mb-14">
@@ -284,7 +284,7 @@ function App() {
       {/* about me */}
 
       {/* Work Experience */}
-      <div className="work-experience mt-32 px-5" id="experience">
+      <div className="work-experience mt-32 px-5 scroll-mt-24" id="experience">
         <div className="max-w-screen-lg mx-auto">
           {/* Section Title */}
           <div className="text-center mb-14">
@@ -425,8 +425,8 @@ function App() {
         </div>
       </div>
 
-      {/* Proyek ------------*/}
-      <div className="proyek mt-32 py-10">
+      {/* projects */}
+<div id="projects" className="projects mt-32 py-10 px-4 sm:px-6 md:px-8 scroll-mt-14">
   <h1 className="text-center text-4xl font-bold mb-2 text-white">
     My <span className="text-violet-500">Projects</span>
   </h1>
@@ -434,120 +434,96 @@ function App() {
     Berikut ini beberapa proyek yang telah saya buat
   </p>
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {/* Card 1 */}
-    <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
-      <div className="relative w-full h-48 sm:h-56 overflow-hidden">
-        <img
-          src="/assets/proyek/proyek1.webp"
-          alt="Web Sekolah"
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-        />
-        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
-            Web Development
-          </span>
+  {/* wrapper supaya ga nempel pojok */}
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      
+      {/* Card 1 */}
+      <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
+        <div className="relative w-full h-44 sm:h-52 md:h-56 overflow-hidden">
+          <img
+            src="/assets/proyek/proyek1.webp"
+            alt="Web Sekolah"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
+              Web Development
+            </span>
+          </div>
+        </div>
+        <div className="p-4 flex flex-col">
+          <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
+            Web Sekolah
+          </h3>
+          <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
+            Website untuk sekolah berbasis HTML, CSS, dan Javascript.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">HTML</span>
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">CSS</span>
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">Javascript</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="#" target="_blank" className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base">
+              <i className="ri-external-link-line text-sm sm:text-base"></i>
+              <span>Live Demo</span>
+            </a>
+            <a href="#" target="_blank" className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base">
+              <i className="ri-github-line text-sm sm:text-base"></i>
+              <span>Github</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="p-4 flex flex-col">
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
-          Web Sekolah
-        </h3>
-        <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
-          Website untuk sekolah berbasis HTML, CSS, dan Javascript.
-        </p>
-        <div className="flex flex-wrap gap-2 mb-3">
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            HTML
-          </span>
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            CSS
-          </span>
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            Javascript
-          </span>
-        </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="#"
-            target="_blank"
-            className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
-          >
-            <i className="ri-external-link-line text-sm sm:text-base"></i>
-            <span>Live Demo</span>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
-          >
-            <i className="ri-github-line text-sm sm:text-base"></i>
-            <span>Github</span>
-          </a>
-        </div>
-      </div>
-    </div>
 
-    {/* Card 2 */}
-    <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
-      <div className="relative w-full h-48 sm:h-56 overflow-hidden">
-        <img
-          src="/assets/proyek/proyek2.webp"
-          alt="Company Profile"
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-        />
-        <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
-            Web Development
-          </span>
+      {/* Card 2 */}
+      <div className="group bg-zinc-800 rounded-md overflow-hidden shadow-lg hover:shadow-violet-500/40 transition-shadow duration-300">
+        <div className="relative w-full h-44 sm:h-52 md:h-56 overflow-hidden">
+          <img
+            src="/assets/proyek/proyek2.webp"
+            alt="Company Profile"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
+              Web Development
+            </span>
+          </div>
+        </div>
+        <div className="p-4 flex flex-col">
+          <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
+            Company Profile
+          </h3>
+          <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
+            Website company profile modern dengan HTML, CSS, Javascript.
+          </p>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">HTML</span>
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">CSS</span>
+            <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">Javascript</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="#" target="_blank" className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base">
+              <i className="ri-external-link-line text-sm sm:text-base"></i>
+              <span>Live Demo</span>
+            </a>
+            <a href="#" target="_blank" className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base">
+              <i className="ri-github-line text-sm sm:text-base"></i>
+              <span>Github</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="p-4 flex flex-col">
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-violet-500">
-          Company Profile
-        </h3>
-        <p className="text-sm sm:text-base text-zinc-400 mb-2 line-clamp-2">
-          Website company profile modern dengan HTML, CSS, Javascript.
-        </p>
-        <div className="flex flex-wrap gap-2 mb-3">
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            HTML
-          </span>
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            CSS
-          </span>
-          <span className="px-2 py-1 bg-zinc-600 text-white text-xs sm:text-sm rounded-full font-semibold">
-            Javascript
-          </span>
-        </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="#"
-            target="_blank"
-            className="flex items-center gap-1 text-violet-500 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
-          >
-            <i className="ri-external-link-line text-sm sm:text-base"></i>
-            <span>Live Demo</span>
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            className="flex items-center gap-1 text-zinc-400 font-semibold hover:text-white transition-colors duration-200 text-sm sm:text-base"
-          >
-            <i className="ri-github-line text-sm sm:text-base"></i>
-            <span>Github</span>
-          </a>
-        </div>
-      </div>
+
     </div>
-    {/* Tambahin Card 3 dst sesuai kebutuhan */}
   </div>
 </div>
 
-      {/* Proyek ------------------------*/}
+      {/* projects */}
 
       {/* skills */}
-      <div className="tools mt-32">
+      <div id="skills" className="skills mt-32 scroll-mt-24">
         <h1
           className="text-4xl/snug font-bold mb-4"
           data-aos="fade-up"
@@ -591,7 +567,7 @@ function App() {
       {/* skills */}
 
       {/* kontak */}
-      <div className="kontak mt-32 sm:p-10 p-0" id="contact">
+      <div className="kontak mt-32 sm:p-10 p-0 scroll-mt-24" id="contact">
         <h1
           className="text-4xl mb-2 font-bold text-center"
           data-aos="fade-up"

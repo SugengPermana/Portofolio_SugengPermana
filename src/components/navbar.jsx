@@ -4,37 +4,38 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const [activeSection, setActiveSection] = useState("beranda");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => {
-    const offset = 120; // tinggi navbar kira2
+  const handleScroll = () => {
+    // hitung offset dinamis dari tinggi navbar (bikin threshold lebih akurat)
+    const navEl = document.querySelector(".navbar");
+    const offset = (navEl?.offsetHeight ?? 120) + 10; // +10 untuk safety
     const scrollPos = window.scrollY + offset;
 
-    const sections = ["beranda", "tentang", "experience", "proyek", "skills", "contact"];
-    let currentSection = "beranda";
+    const sections = ["home", "about", "experience", "projects", "skills", "contact"];
+    let current = sections[0]; // default to first
 
     sections.forEach((id) => {
       const el = document.getElementById(id);
-      if (el) {
-        if (scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
-          currentSection = id;
-        }
+      if (!el) return;
+      if (el.offsetTop <= scrollPos) {
+        current = id; // keep last matched section
       }
     });
 
-    setActiveSection(currentSection);
-
-    // blur effect
-    if (window.scrollY > 150) {
-      setActive(true);
-    } else {
-      setActive(false);
-    }
+    setActiveSection(current);
+    setActive(window.scrollY > 150);
   };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
+  // run once on mount to set initial state
+  handleScroll();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener("resize", handleScroll); // recalc on resize
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("resize", handleScroll);
+  };
 }, []);
 
   const toggleMenu = () => {
@@ -64,9 +65,9 @@ const Navbar = () => {
       <ul className="hidden lg:flex items-center gap-10">
         <li>
           <a
-            href="#beranda"
+            href="#home"
             className={`hover:text-blue-400 ${
-              activeSection === "beranda" ? "text-blue-400" : ""
+              activeSection === "home" ? "text-blue-400" : ""
             }`}
           >
             Home
@@ -74,9 +75,9 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#tentang"
+            href="#about"
             className={`hover:text-blue-400 ${
-              activeSection === "tentang" ? "text-blue-400" : ""
+              activeSection === "about" ? "text-blue-400" : ""
             }`}
           >
             About
@@ -94,9 +95,9 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#proyek"
+            href="#projects"
             className={`hover:text-blue-400 ${
-              activeSection === "proyek" ? "text-blue-400" : ""
+              activeSection === "projects" ? "text-blue-400" : ""
             }`}
           >
             Projects
@@ -141,10 +142,10 @@ const Navbar = () => {
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
           <li>
             <a
-              href="#beranda"
+              href="#home"
               onClick={toggleMenu}
               className={`hover:text-blue-400 ${
-                activeSection === "beranda" ? "text-blue-400" : ""
+                activeSection === "home" ? "text-blue-400" : ""
               }`}
             >
               Home
@@ -152,10 +153,10 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#tentang"
+              href="#about"
               onClick={toggleMenu}
               className={`hover:text-blue-400 ${
-                activeSection === "tentang" ? "text-blue-400" : ""
+                activeSection === "about" ? "text-blue-400" : ""
               }`}
             >
               About
@@ -174,10 +175,10 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#proyek"
+              href="#projects"
               onClick={toggleMenu}
               className={`hover:text-blue-400 ${
-                activeSection === "proyek" ? "text-blue-400" : ""
+                activeSection === "projects" ? "text-blue-400" : ""
               }`}
             >
               Projects
