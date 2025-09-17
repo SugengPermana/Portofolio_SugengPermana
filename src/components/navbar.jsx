@@ -7,36 +7,43 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-  const handleScroll = () => {
-    // hitung offset dinamis dari tinggi navbar (bikin threshold lebih akurat)
-    const navEl = document.querySelector(".navbar");
-    const offset = (navEl?.offsetHeight ?? 120) + 10; // +10 untuk safety
-    const scrollPos = window.scrollY + offset;
+    const handleScroll = () => {
+      // hitung offset dinamis dari tinggi navbar (bikin threshold lebih akurat)
+      const navEl = document.querySelector(".navbar");
+      const offset = (navEl?.offsetHeight ?? 120) + 10; // +10 untuk safety
+      const scrollPos = window.scrollY + offset;
 
-    const sections = ["home", "about", "experience", "projects", "skills", "contact"];
-    let current = sections[0]; // default to first
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "projects",
+        "skills",
+        "contact",
+      ];
+      let current = sections[0]; // default to first
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      if (el.offsetTop <= scrollPos) {
-        current = id; // keep last matched section
-      }
-    });
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (el.offsetTop <= scrollPos) {
+          current = id; // keep last matched section
+        }
+      });
 
-    setActiveSection(current);
-    setActive(window.scrollY > 150);
-  };
+      setActiveSection(current);
+      setActive(window.scrollY > 150);
+    };
 
-  // run once on mount to set initial state
-  handleScroll();
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  window.addEventListener("resize", handleScroll); // recalc on resize
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", handleScroll);
-  };
-}, []);
+    // run once on mount to set initial state
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll); // recalc on resize
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -50,16 +57,16 @@ const Navbar = () => {
     >
       {/* logo */}
       <div className="logo">
-  <h1
-    className="font-bold text-white 
+        <h1
+          className="font-bold text-white 
     text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl 
     whitespace-nowrap"
-  >
-    <span className="block sm:hidden">Sugeng</span>
-    <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
-    <span className="hidden lg:block">Sugeng Permana Desembry</span>
-  </h1>
-</div>
+        >
+          <span className="block sm:hidden">Sugeng</span>
+          <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
+          <span className="hidden lg:block">Sugeng Permana Desembry</span>
+        </h1>
+      </div>
 
       {/* desktop menu */}
       <ul className="hidden lg:flex items-center gap-10">
