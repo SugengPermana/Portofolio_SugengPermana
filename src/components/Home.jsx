@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <div
         id="home"
-        className="hero mt-28 min-h-screen flex flex-col justify-center items-center text-center px-6 scroll-mt-14"
+        className="hero mt-22 min-h-screen flex flex-col justify-center items-center text-center px-6 scroll-mt-14"
       >
         {/* Foto Profil */}
         <img

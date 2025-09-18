@@ -2,22 +2,10 @@ import { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
-  const [active, setActive] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isPastHome, setIsPastHome] = useState(false);
 
-  const handleScrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const navHeight = document.querySelector(".navbar")?.offsetHeight || 100;
-    const top = el.offsetTop - navHeight; // offset supaya tidak tertutup navbar
-    window.scrollTo({
-      top,
-      behavior: "smooth",
-    });
-  };
-
-  // Smooth scroll ke section dengan offset navbar
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 100;
@@ -27,21 +15,14 @@ const Navbar = () => {
         top: element.offsetTop - navbarHeight,
         behavior: "smooth",
       });
-      setOpenMenu(false); // tutup menu mobile
+      setOpenMenu(false);
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "experience",
-        "projects",
-        "skills",
-        "contact",
-      ];
-      const scrollPos = window.scrollY + 150; // threshold untuk highlight
+      const sections = ["home", "about", "experience", "projects", "skills", "contact"];
+      const scrollPos = window.scrollY + 150;
 
       let current = sections[0];
       sections.forEach((id) => {
@@ -50,7 +31,7 @@ const Navbar = () => {
       });
 
       setActiveSection(current);
-      setActive(window.scrollY > 50);
+      setIsPastHome(window.scrollY >= 150);
     };
 
     handleScroll();
@@ -64,8 +45,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`navbar py-5 flex items-center justify-between fixed top-0 left-0 w-full px-6 z-50 transition-all ${
-        active ? "backdrop-blur-md border-b border-zinc-700" : "bg-transparent"
+      className={`navbar py-5 flex items-center justify-between fixed top-0 left-0 w-full px-6 z-50 transition-all duration-300 ${
+        isPastHome
+          ? "backdrop-blur-md border-b border-zinc-700"
+          : "bg-transparent"
       }`}
     >
       {/* Logo */}
@@ -97,7 +80,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div
-        className="lg:hidden text-white text-3xl cursor-pointer"
+        className="lg:hidden text-white text-3xl cursor-pointer relative z-50"
         onClick={() => setOpenMenu(!openMenu)}
       >
         {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
@@ -105,9 +88,15 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-2/3 bg-zinc-900 text-white transform ${
+        className={`fixed top-0 left-0 h-full
+        ${
+          isPastHome
+            ? "w-full bg-transparent backdrop-blur-md"
+            : "w-2/3 bg-transparent"
+        }
+        text-white transform ${
           openMenu ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40`}
+        } transition-all duration-300 ease-in-out z-40`}
       >
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
           {["home", "about", "experience", "projects", "skills", "contact"].map(
