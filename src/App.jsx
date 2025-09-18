@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Divider from "./components/Divider";
 
 function App() {
   return (
@@ -16,17 +17,25 @@ function App() {
         <About />
       </section>
 
+      <Divider />
+
       <section id="experience">
         <Experience />
       </section>
+
+      <Divider />
 
       <section id="projects">
         <Projects />
       </section>
 
+      <Divider />
+
       <section id="skills">
         <Skills />
       </section>
+
+      <Divider />
 
       <section id="contact">
         <Contact />

@@ -21,7 +21,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "experience", "projects", "skills", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "projects",
+        "skills",
+        "contact",
+      ];
       const scrollPos = window.scrollY + 150;
 
       let current = sections[0];
@@ -45,58 +52,61 @@ const Navbar = () => {
 
   return (
     <div
-      className={`navbar py-5 flex items-center justify-between fixed top-0 left-0 w-full px-6 z-50 transition-all duration-300 ${
+      className={`navbar py-5 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isPastHome
           ? "backdrop-blur-md border-b border-zinc-700"
           : "bg-transparent"
       }`}
     >
-      {/* Logo */}
-      <div className="logo">
-        <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
-          <span className="block sm:hidden">Sugeng</span>
-          <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
-          <span className="hidden lg:block">Sugeng Permana Desembry</span>
-        </h1>
-      </div>
+      {/* Container biar konten selalu center */}
+      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 max-w-7xl mx-auto">
+        {/* Logo */}
+        <div className="logo">
+          <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
+            <span className="block sm:hidden">Sugeng</span>
+            <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
+            <span className="hidden lg:block">Sugeng Permana Desembry</span>
+          </h1>
+        </div>
 
-      {/* Desktop Menu */}
-      <ul className="hidden lg:flex items-center gap-10">
-        {["home", "about", "experience", "projects", "skills", "contact"].map(
-          (sec) => (
-            <li key={sec}>
-              <button
-                onClick={() => scrollToSection(sec)}
-                className={`hover:text-blue-400 ${
-                  activeSection === sec ? "text-blue-400" : ""
-                }`}
-              >
-                {sec.charAt(0).toUpperCase() + sec.slice(1)}
-              </button>
-            </li>
-          )
-        )}
-      </ul>
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-10 text-sm xl:text-base">
+          {["home", "about", "experience", "projects", "skills", "contact"].map(
+            (sec) => (
+              <li key={sec}>
+                <button
+                  onClick={() => scrollToSection(sec)}
+                  className={`hover:text-blue-400 ${
+                    activeSection === sec ? "text-blue-400" : ""
+                  }`}
+                >
+                  {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                </button>
+              </li>
+            )
+          )}
+        </ul>
 
-      {/* Hamburger */}
-      <div
-        className="lg:hidden text-white text-3xl cursor-pointer relative z-50"
-        onClick={() => setOpenMenu(!openMenu)}
-      >
-        {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
+        {/* Hamburger */}
+        <div
+          className="lg:hidden text-white text-3xl cursor-pointer relative z-50"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
+          {openMenu ? <RiCloseLine /> : <RiMenu3Line />}
+        </div>
       </div>
 
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 h-full
-        ${
-          isPastHome
-            ? "w-full bg-transparent backdrop-blur-md"
-            : "w-2/3 bg-transparent"
-        }
-        text-white transform ${
-          openMenu ? "translate-x-0" : "-translate-x-full"
-        } transition-all duration-300 ease-in-out z-40`}
+  ${
+    isPastHome
+      ? "w-full bg-transparent backdrop-blur-md"
+      : "w-2/3 bg-transparent"
+  }
+  text-white transform ${
+    openMenu ? "translate-x-0" : "-translate-x-full"
+  } transition-all duration-300 ease-in-out z-40`}
       >
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
           {["home", "about", "experience", "projects", "skills", "contact"].map(
@@ -104,7 +114,7 @@ const Navbar = () => {
               <li key={sec}>
                 <button
                   onClick={() => scrollToSection(sec)}
-                  className={`hover:text-blue-400 ${
+                  className={`cursor-pointer hover:text-blue-400 ${
                     activeSection === sec ? "text-blue-400" : ""
                   }`}
                 >
