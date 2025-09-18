@@ -7,13 +7,13 @@ const Skills = () => {
       className="skills mt-24 px-4 sm:px-6 md:px-8 lg:px-12 scroll-mt-12"
     >
       <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
-  My <span className="text-violet-500">Skills</span>
-</h1>
-<p className="text-base sm:text-lg text-center opacity-50 mb-10">
-  Berikut beberapa tools dan teknologi yang saya kuasai
-</p>
+        My <span className="text-violet-500">Skills</span>
+      </h1>
+      <p className="text-base sm:text-lg text-center opacity-50 mb-10">
+        Berikut beberapa tools dan teknologi yang saya kuasai
+      </p>
 
-
+      {/* Skills Grid */}
       <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (
           <div
@@ -23,14 +23,12 @@ const Skills = () => {
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">
               {category.title}
             </h2>
-
             <div className="space-y-2">
               {category.skills.map((skill) => (
                 <div
                   key={skill.id}
                   className="group flex items-center gap-2 bg-zinc-800 rounded-md p-2.5 transition duration-300 hover:scale-105 hover:bg-zinc-700/50"
                 >
-                  {/* Icon di kiri */}
                   <div
                     className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-md flex items-center justify-center transition duration-300"
                     style={{ backgroundColor: skill.color }}
@@ -41,8 +39,6 @@ const Skills = () => {
                       className="w-5 h-5 object-contain transition duration-300 group-hover:scale-110"
                     />
                   </div>
-
-                  {/* Text + Progress */}
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-0.5">
                       <span className="text-white text-sm sm:text-base font-medium">

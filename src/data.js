@@ -63,3 +63,20 @@ export const skillCategories = [
     ],
   },
 ];
+
+export const achievements = [
+  {
+    id: 1,
+    title: "Google Cloud Skills Boost",
+    issuer: "Google Cloud",
+    year: "2025",
+    link: "https://www.cloudskillsboost.google/public_profiles/xxxx",
+  },
+  {
+    id: 2,
+    title: "Meta Front-End Developer",
+    issuer: "Coursera",
+    year: "2025",
+    link: "https://coursera.org/share/xxxx",
+  },
+];

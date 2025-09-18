@@ -27,6 +27,7 @@ const Navbar = () => {
         "experience",
         "projects",
         "skills",
+        "achievements", // ✅ ganti dari cb → achievements
         "contact",
       ];
       const scrollPos = window.scrollY + 150;
@@ -58,11 +59,11 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      {/* Container biar konten selalu center */}
+      {/* Container biar konten center */}
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="logo">
-          <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap">
+          <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl whitespace-nowrap">
             <span className="block sm:hidden">Sugeng</span>
             <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
             <span className="hidden lg:block">Sugeng Permana Desembry</span>
@@ -70,21 +71,27 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6 xl:gap-10 text-sm xl:text-base">
-          {["home", "about", "experience", "projects", "skills", "contact"].map(
-            (sec) => (
-              <li key={sec}>
-                <button
-                  onClick={() => scrollToSection(sec)}
-                  className={`hover:text-blue-400 ${
-                    activeSection === sec ? "text-blue-400" : ""
-                  }`}
-                >
-                  {sec.charAt(0).toUpperCase() + sec.slice(1)}
-                </button>
-              </li>
-            )
-          )}
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8 text-xs lg:text-sm">
+          {[
+            "home",
+            "about",
+            "experience",
+            "projects",
+            "skills",
+            "achievements", // ✅ pakai achievements
+            "contact",
+          ].map((sec) => (
+            <li key={sec}>
+              <button
+                onClick={() => scrollToSection(sec)}
+                className={`hover:text-blue-400 capitalize ${
+                  activeSection === sec ? "text-blue-400" : ""
+                }`}
+              >
+                {sec}
+              </button>
+            </li>
+          ))}
         </ul>
 
         {/* Hamburger */}
@@ -99,30 +106,32 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 h-full
-  ${
-    isPastHome
-      ? "w-full bg-transparent backdrop-blur-md"
-      : "w-2/3 bg-transparent"
-  }
-  text-white transform ${
-    openMenu ? "translate-x-0" : "-translate-x-full"
-  } transition-all duration-300 ease-in-out z-40`}
+        ${isPastHome ? "w-full backdrop-blur-md" : "w-2/3 bg-zinc-900/90"}
+        text-white transform ${
+          openMenu ? "translate-x-0" : "-translate-x-full"
+        } transition-all duration-300 ease-in-out z-40`}
       >
         <ul className="flex flex-col items-start gap-6 p-6 mt-16">
-          {["home", "about", "experience", "projects", "skills", "contact"].map(
-            (sec) => (
-              <li key={sec}>
-                <button
-                  onClick={() => scrollToSection(sec)}
-                  className={`cursor-pointer hover:text-blue-400 ${
-                    activeSection === sec ? "text-blue-400" : ""
-                  }`}
-                >
-                  {sec.charAt(0).toUpperCase() + sec.slice(1)}
-                </button>
-              </li>
-            )
-          )}
+          {[
+            "home",
+            "about",
+            "experience",
+            "projects",
+            "skills",
+            "achievements", // ✅ ikut mobile menu juga
+            "contact",
+          ].map((sec) => (
+            <li key={sec}>
+              <button
+                onClick={() => scrollToSection(sec)}
+                className={`cursor-pointer hover:text-blue-400 capitalize ${
+                  activeSection === sec ? "text-blue-400" : ""
+                }`}
+              >
+                {sec}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
