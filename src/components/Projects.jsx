@@ -4,12 +4,13 @@ const Projects = () => {
       id="projects"
       className="projects mt-24 px-4 sm:px-6 md:px-8 lg:px-12 scroll-mt-14"
     >
-      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-2 text-white">
-        My <span className="text-violet-500">Projects</span>
-      </h1>
-      <p className="text-sm sm:text-base text-center opacity-50 mb-10">
-        Berikut ini beberapa proyek yang telah saya buat
-      </p>
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
+  My <span className="text-violet-500">Projects</span>
+</h1>
+<p className="text-base sm:text-lg text-center opacity-50 mb-10">
+  Berikut ini beberapa proyek yang telah saya buat
+</p>
+
 
       {/* wrapper supaya ga nempel pojok */}
       <div className="max-w-6xl mx-auto">

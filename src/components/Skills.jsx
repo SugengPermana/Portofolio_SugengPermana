@@ -6,12 +6,13 @@ const Skills = () => {
       id="skills"
       className="skills mt-24 px-4 sm:px-6 md:px-8 lg:px-12 scroll-mt-12"
     >
-      <h1 className="text-center text-3xl sm:text-4xl font-bold mb-2 text-white">
-        My <span className="text-violet-500">Skills</span>
-      </h1>
-      <p className="text-sm sm:text-base text-center opacity-50 mb-10">
-        Berikut beberapa tools dan teknologi yang saya kuasai
-      </p>
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
+  My <span className="text-violet-500">Skills</span>
+</h1>
+<p className="text-base sm:text-lg text-center opacity-50 mb-10">
+  Berikut beberapa tools dan teknologi yang saya kuasai
+</p>
+
 
       <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (

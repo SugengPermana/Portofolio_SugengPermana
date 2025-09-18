@@ -101,16 +101,19 @@ const Experience = () => {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
-                      Laravel
+                      React
                     </span>
                     <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
-                      PHP
+                      Next Js
                     </span>
                     <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
                       Tailwind CSS
                     </span>
                     <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
-                      React
+                      Node Js
+                    </span>
+                    <span className="bg-violet-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
+                      Figma
                     </span>
                   </div>
                 </div>

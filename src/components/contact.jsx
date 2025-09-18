@@ -2,23 +2,13 @@ const Contact = () => {
   return (
     <div>
       <div className="kontak mt-32 sm:p-10 p-0 scroll-mt-24" id="contact">
-        <h1
-          className="text-4xl mb-2 font-bold text-center"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          Kontak
-        </h1>
-        <p
-          className="text-base/loose text-center mb-10 opacity-50"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="300"
-          data-aos-once="true"
-        >
-          Mari Berhubung dengan saya
-        </p>
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
+  Contact
+</h1>
+<p className="text-base sm:text-lg text-center opacity-50 mb-10">
+  Mari Berhubung dengan saya
+</p>
+
         <form
           action="https://formsubmit.co/sugengpermanadesembry@gmail.com"
           method="POST"
