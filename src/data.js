@@ -37,10 +37,9 @@ export const skillCategories = [
     id: 1,
     title: "Frontend Development",
     skills: [
-      { id: "react", name: "React", percent: 80, color: "#61DAFB", logo: "/assets/tools/reactjs.png" },
-      { id: "nextjs", name: "Next.js", percent: 70, color: "#000000", logo: "/assets/tools/nextjs.png" },
-      { id: "tailwind", name: "TailwindCSS", percent: 90, color: "#38BDF8", logo: "/assets/tools/tailwind.png" },
-      { id: "bootstrap", name: "Bootstrap", percent: 60, color: "#7952B3", logo: "/assets/tools/bootstrap.png" },
+      { id: "react", name: "React", percent: 85, color: "#61DAFB", logo: "/assets/tools/reactjs.png" },
+      { id: "nextjs", name: "Next.js", percent: 50, color: "#000000", logo: "/assets/tools/nextjs.png" },
+      { id: "tailwind", name: "TailwindCSS", percent: 85, color: "#BEF4FAFF", logo: "/assets/tools/tailwind.png" },
       { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: "/assets/tools/js.png" },
     ],
   },
@@ -48,18 +47,27 @@ export const skillCategories = [
     id: 2,
     title: "Backend Development",
     skills: [
-      { id: "node", name: "Node.js", percent: 75, color: "#339933", logo: "/assets/tools/nodejs.png" },
-      { id: "express", name: "Express.js", percent: 70, color: "#FFFFFF", logo: "/assets/tools/express.png" },
-      { id: "mongo", name: "MongoDB", percent: 65, color: "#47A248", logo: "/assets/tools/mongodb.png" },
+      { id: "node", name: "Node.js", percent: 80, color: "#08F508FF", logo: "/assets/tools/nodejs.png" },
+      { id: "php", name: "PHP", percent: 40, color: "#7BA2B9FF", logo: "/assets/tools/php.png" },
     ],
   },
   {
     id: 3,
     title: "Tools & DevOps",
     skills: [
-      { id: "github", name: "Git & GitHub", percent: 85, color: "#F05032", logo: "/assets/tools/github.png" },
-      { id: "docker", name: "Docker", percent: 60, color: "#2496ED", logo: "/assets/tools/docker.png" },
-      { id: "gcp", name: "Google Cloud", percent: 70, color: "#4285F4", logo: "/assets/tools/googlecloud.png" },
+      { id: "github", name: "Git & GitHub", percent: 90, color: "#030201FF", logo: "/assets/tools/github.png" },
+      { id: "docker", name: "Docker", percent: 60, color: "#C5D2F4FF", logo: "/assets/tools/docker.png" },
+      { id: "gcp", name: "Google Cloud", percent: 70, color: "#FDFDFDFF", logo: "/assets/tools/cloud.png" },
+      { id: "n8n", name: "N8N", percent: 60, color: "#F5D1D7FF", logo: "/assets/tools/n8n.png" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Design & Prototype",
+    skills: [
+      { id: "figma", name: "Figma", percent: 70, color: "#F24E1E", logo: "/assets/tools/figma.png" },
+      { id: "canva", name: "Canva", percent: 70, color: "#00C4CC", logo: "/assets/tools/canva.png" },
+      { id: "wordpress", name: "WordPress", percent: 40, color: "#FFFFFFFF", logo: "/assets/tools/wordpress.png" },
     ],
   },
 ];
@@ -67,16 +75,27 @@ export const skillCategories = [
 export const achievements = [
   {
     id: 1,
-    title: "Google Cloud Skills Boost",
-    issuer: "Google Cloud",
+    title: "Belajar Dasar Cloud",
+    issuer: "Dicoding",
     year: "2025",
-    link: "https://www.cloudskillsboost.google/public_profiles/xxxx",
+    link: "https://drive.google.com/file/d/1TzcDstvB8Fy90rWmJVcufHdbu25h9Ysm/view",
+    imageUrl: "/assets/achivement/dicoding cloud.png",
   },
   {
     id: 2,
-    title: "Meta Front-End Developer",
-    issuer: "Coursera",
+    title: "Belajar Dasar javascript",
+    issuer: "Dicoding",
     year: "2025",
-    link: "https://coursera.org/share/xxxx",
+    link: "https://drive.google.com/file/d/1zE26IRVzk7S5tv7wb4SEuvUKmvojFQSp/view",
+    imageUrl: "/assets/achivement/javascript.png",
+  },
+  {
+    id: 3,
+    title: "belajar backend Javascript",
+    issuer: "Dicoding",
+    year: "2025",
+    link: "https://drive.google.com/file/d/1oeHQHQO3-sdKc0yrfDGLSGS-1XkyDWVu/view",
+    imageUrl: "/assets/achivement/backend.png",
   },
 ];
+

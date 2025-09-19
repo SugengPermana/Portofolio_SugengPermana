@@ -29,7 +29,7 @@ function App() {
         <Skills />
       </section>
 
-      <section id="skills">
+      <section id="achievements">
         <Achievements />
       </section>
 
