@@ -49,26 +49,24 @@ const Achievements = () => {
       {/* Box Deskripsi */}
       <div className="mt-12 bg-zinc-800 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600">
         <h3 className="text-3xl font-bold text-white mb-4">
-          Always Learning, Always Growing
+          Keep Growing, Keep Building
         </h3>
         <p className="text-zinc-400 mb-8 leading-relaxed">
-          Technology evolves rapidly, and so do I. I'm constantly learning new
-          technologies, experimenting with cutting-edge tools, and staying
-          updated with industry best practices. My passion for continuous
-          learning ensures that I deliver modern, efficient solutions.
+          The world of technology never stands still and neither do I. I continuously explore new frameworks, embrace innovative tools, and refine my skills to stay ahead of the 
+          curve. With every challenge, I grow stronger and deliver solutions that are not only modern but also impactful.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-blue-500 mb-2">10+</h1>
-            <p className="text-zinc-400">Technologies Mastered</p>
+            <h1 className="text-4xl font-bold text-blue-500 mb-2">7+</h1>
+            <p className="text-zinc-400">Tools & Frameworks Explored</p>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-purple-500 mb-2">30+</h1>
+            <h1 className="text-4xl font-bold text-purple-500 mb-2">20+</h1>
             <p className="text-zinc-400">Courses Completed</p>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-green-500 mb-2">2+</h1>
-            <p className="text-zinc-400">Years Experience</p>
+            <h1 className="text-4xl font-bold text-green-500 mb-2">7+</h1>
+            <p className="text-zinc-400">month of Hands On Practice</p>
           </div>
         </div>
       </div>
