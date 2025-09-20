@@ -87,7 +87,7 @@ const Home = () => {
         {/* Sosial Media */}
         <div className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-zinc-400">
           <a
-            href="https://www.linkedin.com/in/username"
+            href="https://www.linkedin.com/in/sugengpermanadesembry"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-violet-500 transition transform hover:scale-110"
@@ -95,7 +95,7 @@ const Home = () => {
             <i className="ri-linkedin-fill"></i>
           </a>
           <a
-            href="https://github.com/username"
+            href="https://github.com/sugengpermana"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-violet-500 transition transform hover:scale-110"
@@ -109,7 +109,7 @@ const Home = () => {
             <i className="ri-mail-fill"></i>
           </a>
           <a
-            href="https://www.instagram.com/username"
+            href="https://www.instagram.com/sgprmna_"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-violet-500 transition transform hover:scale-110"
@@ -119,7 +119,15 @@ const Home = () => {
         </div>
         {/* Arrow animasi */}
         <a
-          href="#tentang"
+        onClick={() => {
+              const el = document.getElementById("about");
+              const navHeight =
+                document.querySelector(".navbar")?.offsetHeight || 100;
+              window.scrollTo({
+                top: el.offsetTop - navHeight,
+                behavior: "smooth",
+              });
+            }}
           className="mt-10 text-violet-500 text-4xl animate-bounce"
         >
           <i className="ri-arrow-down-s-line"></i>

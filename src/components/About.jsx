@@ -20,7 +20,7 @@ const About = () => {
               data-aos-duration="2000"
               data-aos-once="true"
             >
-              A brief introduction about who I am and what I do
+              Discover My Journey and What I Bring to the Table
             </p>
           </div>
 
@@ -43,9 +43,7 @@ const About = () => {
                 data-aos-duration="2000"
                 data-aos-once="true"
               >
-                I&apos;m passionate about building modern, responsive, and
-                user-friendly web applications. Always learning and exploring
-                new technologies.
+                I&apos;m passionate about building modern, responsive, and scalable web applications. Beyond the frontend, I have practical experience with Node.js for backend development, workflow automation using N8n, and managing cloud environments through Cloud Console.
               </p>
 
               <h4
@@ -62,8 +60,7 @@ const About = () => {
                 data-aos-duration="2000"
                 data-aos-once="true"
               >
-                Specializing in React, Tailwind CSS, and Next.js to craft smooth
-                experiences for the web.
+                specialize in modern frameworks like React, Next.js, and Tailwind CSS to create seamless digital experiences across devices.
               </p>
             </div>
 
