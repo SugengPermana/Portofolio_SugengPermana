@@ -1,141 +1,98 @@
+import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+
 const Contact = () => {
   return (
-    <div>
-      <div className="kontak mt-32 sm:p-10 p-0 scroll-mt-24" id="contact">
-        <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
-          Get in <span className="text-violet-400">Touch</span>
-        </h1>
-        <p className="text-base sm:text-lg text-center opacity-70 mb-16 text-gray-300">
-          Ready to start your next project? Let's work together to create something amazing
-        </p>
+    <section id="contact" className="py-16 px-5 bg-zinc-900">
+      <div className="max-w-screen-lg mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Left Side - Contact Information */}
+        <div className="flex flex-col justify-start h-full">
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            Let's Connect
+          </h2>
 
-        {/* Contact Information Section */}
-        <div
-  className="mb-12 bg-zinc-900/50 rounded-xl p-8 sm:p-12"
-  data-aos="fade-up"
-  data-aos-duration="1000"
-  data-aos-delay="200"
->
-  <h2 className="text-2xl font-bold text-center mb-8 text-violet-400">
-    Let's Connect
-  </h2>
-  <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-    I'm always interested in new opportunities and exciting projects.
-    Whether you have a question or just want to say hi, I'll get back to you as soon as possible.
-  </p>
+          {/* Description */}
+          <p className="text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed mb-8 flex-grow">
+            I'm always interested in hearing about new projects and opportunities.
+            Whether you're a company looking to hire, or you're a fellow developer
+            wanting to collaborate, I'd love to hear from you.
+          </p>
 
-  {/* Contact Details */}
-  <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12">
-    {/* Email */}
-    <div className="flex items-center gap-3 text-gray-300 group">
-      <div className="p-3 rounded-full bg-zinc-800 group-hover:bg-violet-600 transition duration-300">
-        <svg
-          className="w-5 h-5 text-violet-400 group-hover:text-white transition duration-300"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-        </svg>
-      </div>
-      <span className="group-hover:text-violet-400 transition duration-300">
-        sugengpermanadesembry@gmail.com
-      </span>
-    </div>
-
-    {/* Phone */}
-    <div className="flex items-center gap-3 text-gray-300 group">
-      <div className="p-3 rounded-full bg-zinc-800 group-hover:bg-violet-600 transition duration-300">
-        <svg
-          className="w-5 h-5 text-violet-400 group-hover:text-white transition duration-300"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-        </svg>
-      </div>
-      <span className="group-hover:text-violet-400 transition duration-300">
-        +62 812-3456-7890
-      </span>
-    </div>
-
-    {/* Location */}
-    <div className="flex items-center gap-3 text-gray-300 group">
-      <div className="p-3 rounded-full bg-zinc-800 group-hover:bg-violet-600 transition duration-300">
-        <svg
-          className="w-5 h-5 text-violet-400 group-hover:text-white transition duration-300"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </div>
-      <span className="group-hover:text-violet-400 transition duration-300">
-        Jakarta, Indonesia
-      </span>
-    </div>
-  </div>
-</div>
-
-        <form
-          action="https://formsubmit.co/sugengpermanadesembry@gmail.com"
-          method="POST"
-          className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md"
-          autoComplete="off"
-          data-aos="fade-up"
-        >
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Nama Lengkap</label>
-              <input
-                type="text"
-                name="nama"
-                placeholder="Masukan Nama"
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              />
+          {/* Contact Details */}
+          <div className="flex flex-col gap-4 sm:gap-6 mt-auto">
+            {/* Email */}
+            <div className="flex items-center gap-3 sm:gap-4 bg-zinc-800/60 p-4 rounded-xl shadow-md hover:bg-zinc-700/60 transition duration-300">
+              <div className="bg-violet-600 p-2 sm:p-3 rounded-lg transition transform hover:scale-110 hover:bg-violet-700 flex-shrink-0">
+                <FiMail className="text-white text-sm sm:text-base md:text-lg" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="text-xs sm:text-sm md:text-base font-semibold text-white">
+                  Email
+                </h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-zinc-300 break-words">
+                  sugengpermanadesembry@gmail.com
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Masukan Email"
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              />
+
+            {/* Phone */}
+            <div className="flex items-center gap-3 sm:gap-4 bg-zinc-800/60 p-4 rounded-xl shadow-md hover:bg-zinc-700/60 transition duration-300">
+              <div className="bg-violet-600 p-2 sm:p-3 rounded-lg transition transform hover:scale-110 hover:bg-violet-700 flex-shrink-0">
+                <FiPhone className="text-white text-sm sm:text-base md:text-lg" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="text-xs sm:text-sm md:text-base font-semibold text-white">
+                  Phone
+                </h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-zinc-300 break-words">
+                  +62 812-3456-7890
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="pesan" className="font-semibold">
-                Pesan
-              </label>
-              <textarea
-                name="pesan"
-                id="pesan"
-                cols={45}
-                rows={7}
-                placeholder="Masukan Pesan"
-                className="border border-zinc-500 p-2 rounded-md"
-                required
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-violet-600"
-              >
-                Kirim Pesan
-              </button>
+
+            {/* Location */}
+            <div className="flex items-center gap-3 sm:gap-4 bg-zinc-800/60 p-4 rounded-xl shadow-md hover:bg-zinc-700/60 transition duration-300">
+              <div className="bg-violet-600 p-2 sm:p-3 rounded-lg transition transform hover:scale-110 hover:bg-violet-700 flex-shrink-0">
+                <FiMapPin className="text-white text-sm sm:text-base md:text-lg" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="text-xs sm:text-sm md:text-base font-semibold text-white">
+                  Location
+                </h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-zinc-300 break-words">
+                  Jakarta, Indonesia
+                </p>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-  )
-}
+        </div>
 
-export default Contact
+        {/* Right Side - Contact Form */}
+        <div className="bg-zinc-800/60 p-6 rounded-xl shadow-md flex flex-col h-full">
+          <form className="flex flex-col gap-4 h-full" required>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700"
+            />
+            <textarea
+              placeholder="Your Message"
+              rows="6"
+              className="p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700 resize-none flex-1"
+            ></textarea>
+            <button className="bg-violet-600 hover:bg-violet-700 transition p-3 rounded-md font-semibold text-white text-sm sm:text-base mt-auto">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

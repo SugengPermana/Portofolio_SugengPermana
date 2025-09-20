@@ -1,25 +1,108 @@
-const Footer = () => {
-  return (
-    <div className="mt-32 py-4 flex md:flex-row flex-col gap-6 md:gap-0 justify-between items-center">
-      <h1 className="text-2xl font-bold">Portofolio</h1>
-      <div className="flex gap-2">
-        <a href="#beranda">Beranda</a>
-        <a href="#tentanf">Tentang</a>
-        <a href="#proyek">Proyek</a>
-      </div>
-      <div className="flex items-center gap-3">
-        <a href="#">
-          <i className="ri-github-fill ri-2x"></i>
-        </a>
-        <a href="#">
-          <i className="ri-instagram-fill ri-2x"></i>
-        </a>
-        <a href="#">
-          <i className="ri-linkedin-fill ri-2x"></i>
-        </a>
-      </div>
-    </div>
-  )
-}
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa";
 
-export default Footer
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="relative w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50">
+      {/* Arrow Up */}
+      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+        <button
+          onClick={scrollToTop}
+          className="w-12 h-12 flex items-center justify-center rounded-full
+          bg-gradient-to-r from-violet-600 to-blue-600
+          text-white shadow-lg transition transform hover:scale-110 cursor-pointer"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3 text-sm">
+        {/* Left: About */}
+        <div>
+          <h3 className="text-lg font-bold text-white">Sugeng Permana Desembry</h3>
+          <p className="mt-3 text-zinc-400">
+            A passionate learner and builder, combining technology, creativity, and
+            innovation to deliver impactful solutions.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-4">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-400 transition"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="mailto:youremail@example.com"
+              className="hover:text-violet-400 transition"
+            >
+              <FaEnvelope size={20} />
+            </a>
+          </div>
+        </div>
+
+        {/* Middle: Quick Links */}
+        <div>
+          <h3 className="text-lg font-bold text-white">Quick Links</h3>
+          <ul className="mt-3 space-y-2">
+            {[
+              "Home",
+              "About",
+              "Experience",
+              "Projects",
+              "Skills",
+              "Achievement",
+              "Contact",
+            ].map((link, i) => (
+              <li key={i}>
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  className="hover:text-violet-400 transition"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right: Get in Touch */}
+        <div>
+          <h3 className="text-lg font-bold text-white">Get in Touch</h3>
+          <ul className="mt-3 space-y-2 text-zinc-400">
+            <li>Email: youremail@example.com</li>
+            <li>Phone: +62 812-3456-7890</li>
+            <li>Location: Jakarta, Indonesia</li>
+          </ul>
+
+          <div className="mt-4">
+            <h4 className="font-semibold text-white">Available For:</h4>
+            <p className="text-zinc-400">Freelance, Remote Work, Collaboration</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom copyright */}
+      <div className="mt-12 text-center text-xs text-zinc-500">
+        © {new Date().getFullYear()} Sugeng Permana Desembry. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
