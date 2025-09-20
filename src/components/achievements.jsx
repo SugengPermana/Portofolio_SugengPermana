@@ -47,7 +47,7 @@ const Achievements = () => {
       </div>
 
       {/* Box Deskripsi */}
-      <div className="mt-12 bg-zinc-800 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600">
+      <div className="mt-12 from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600">
         <h3 className="text-3xl font-bold text-white mb-4">
           Keep Growing, Keep Building
         </h3>
