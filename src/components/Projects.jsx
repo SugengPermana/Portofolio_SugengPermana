@@ -8,9 +8,8 @@ const Projects = () => {
   My <span className="text-violet-500">Projects</span>
 </h1>
 <p className="text-base sm:text-lg text-center opacity-50 mb-10">
-  Berikut ini beberapa proyek yang telah saya buat
+  Here are some of the projects where I applied my expertise to deliver functional and impactful solutions.
 </p>
-
 
       {/* wrapper supaya ga nempel pojok */}
       <div className="max-w-6xl mx-auto">

@@ -8,7 +8,7 @@ const Experience = () => {
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
               data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos-duration="2000"
               data-aos-once="true"
             >
               Work <span className="text-violet-500">Experience</span>
