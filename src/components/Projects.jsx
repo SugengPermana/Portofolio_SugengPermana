@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { listProyek } from '../data';
+import { useState } from "react";
+import { listProyek } from "../data";
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,16 +20,33 @@ const Projects = () => {
       id="projects"
       className="projects mt-24 px-4 sm:px-6 md:px-8 lg:px-12 scroll-mt-14"
     >
-      <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
+      <h1
+        className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-once="true"
+      >
         My <span className="text-violet-500">Projects</span>
       </h1>
-      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10">
-        Here are some of the projects where I applied my expertise to deliver functional and impactful solutions.
+      <p
+        className="text-base sm:text-lg text-center text-zinc-400 mb-10"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-once="true"
+      >
+        Here are some of the projects where I applied my expertise to deliver
+        functional and impactful solutions.
       </p>
 
       {/* wrapper supaya ga nempel pojok */}
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+          data-aos-delay="200"
+          data-aos-once="true"
+        >
           {listProyek.map((project) => (
             <div
               key={project.id}
@@ -107,7 +124,7 @@ const Projects = () => {
               {/* Close button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer" 
+                className="absolute top-4 right-4 z-10 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer"
               >
                 <i className="ri-close-line text-xl"></i>
               </button>
@@ -136,13 +153,19 @@ const Projects = () => {
 
                     {/* Duration */}
                     <div className="mb-6">
-                      <h3 className="text-violet-400 font-semibold mb-2">Durasi Pengerjaan</h3>
-                      <p className="text-zinc-300">{selectedProject.dad} hari</p>
+                      <h3 className="text-violet-400 font-semibold mb-2">
+                        Durasi Pengerjaan
+                      </h3>
+                      <p className="text-zinc-300">
+                        {selectedProject.dad} hari
+                      </p>
                     </div>
 
                     {/* Technologies */}
                     <div className="mb-6">
-                      <h3 className="text-violet-400 font-semibold mb-3">Teknologi yang Digunakan</h3>
+                      <h3 className="text-violet-400 font-semibold mb-3">
+                        Teknologi yang Digunakan
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tools.map((tool, index) => (
                           <span
@@ -158,7 +181,9 @@ const Projects = () => {
 
                   {/* Right column - Links */}
                   <div className="lg:w-64">
-                    <h3 className="text-violet-400 font-semibold mb-4">Links</h3>
+                    <h3 className="text-violet-400 font-semibold mb-4">
+                      Links
+                    </h3>
                     <div className="space-y-3">
                       <a
                         href={selectedProject.live}
@@ -171,7 +196,9 @@ const Projects = () => {
                         </div>
                         <div>
                           <div className="font-semibold">Live Demo</div>
-                          <div className="text-sm text-zinc-400">Lihat project berjalan</div>
+                          <div className="text-sm text-zinc-400">
+                            Lihat project berjalan
+                          </div>
                         </div>
                       </a>
 
@@ -186,7 +213,9 @@ const Projects = () => {
                         </div>
                         <div>
                           <div className="font-semibold">Source Code</div>
-                          <div className="text-sm text-zinc-400">Lihat kode di Github</div>
+                          <div className="text-sm text-zinc-400">
+                            Lihat kode di Github
+                          </div>
                         </div>
                       </a>
                     </div>

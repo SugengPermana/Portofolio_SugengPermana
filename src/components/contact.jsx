@@ -18,10 +18,20 @@ const Contact = () => {
     <section id="contact" className="mt-24 px-5 bg-zinc-900">
       {/* Title */}
       <div className="mt-16">
-        <h2 className="text-center text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-white mb-2">
+        <h2
+          className="text-center text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-white mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           Get In <span className="text-violet-500">Touch</span>
         </h2>
-        <p className="text-base sm:text-lg text-center text-zinc-400 mb-10 max-w-2xl mx-auto">
+        <p
+          className="text-base sm:text-lg text-center text-zinc-400 mb-10 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-once="true"
+        >
           Looking for a reliable freelancer? I’m here to help you design, build,
           and launch your next big thing.
         </p>
@@ -30,11 +40,21 @@ const Contact = () => {
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 px-2 sm:px-6 md:px-8 lg:px-8 xl:px16 mx-auto max-w-7xl">
         {/* Left Side - Contact Information */}
         <div className="flex flex-col justify-start h-full">
-          <h2 className=" md:text-2xl lg:text-2xl font-bold text-white mb-4 max-w-sm">
+          <h2
+            className=" md:text-2xl lg:text-2xl font-bold text-white mb-4 max-w-sm"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
             Let’s Build Something Great Together
           </h2>
 
-          <p className="text-zinc-400 text-sm sm:text-base md:text-lg leading-relaxed mb-8 flex-grow">
+          <p
+            className="text-zinc-400 text-sm sm:text-base md:text-lg leading-relaxed mb-8 flex-grow"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
             I’m always excited about new projects and opportunities. From modern
             web apps to smart workflow automation, I help businesses save time
             and scale faster. Ready to bring your ideas to the next level? I’m
@@ -42,7 +62,12 @@ const Contact = () => {
           </p>
 
           {/* Contact Details */}
-          <div className="flex flex-col gap-4 sm:gap-6 mt-auto">
+          <div
+            className="flex flex-col gap-4 sm:gap-6 mt-auto"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-aos-once="true"
+          >
             {/* Email */}
             <div
               className="flex items-center gap-3 sm:gap-4 bg-zinc-800/60 p-4 rounded-xl shadow-md hover:bg-zinc-700/60 transition duration-300 cursor-pointer"
@@ -114,7 +139,12 @@ const Contact = () => {
         </div>
 
         {/* Right Side - Contact Form */}
-        <div className="bg-zinc-800/60 p-4 lg:p-6 rounded-xl shadow-md flex flex-col h-full">
+        <div
+          className="bg-zinc-800/60 p-4 lg:p-6 rounded-xl shadow-md flex flex-col h-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <form
             action="https://formsubmit.co/sugengpermanadesembry@gmail.com"
             method="POST"

@@ -6,7 +6,11 @@ const Footer = () => {
   };
 
   return (
-<footer className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10">
+<footer className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+      data-aos-once="true">
+
       {/* Arrow Up */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
         <button

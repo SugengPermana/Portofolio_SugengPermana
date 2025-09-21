@@ -19,7 +19,7 @@ const Home = () => {
 
         {/* Nama */}
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 mb-2"
+          className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-6 sm:mt-8 md:mt-10 lg:mt-6 xl:mt-14 mb-2"
           data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-once="true"
@@ -40,7 +40,7 @@ const Home = () => {
         {/* Deskripsi */}
         <p
           className="max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 
-          text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl text-zinc-300 mb-8 leading-relaxed"
+          text-sm sm:text-base md:text-lg lg:text-md xl:text-xl text-zinc-300 mb-8 leading-relaxed"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
