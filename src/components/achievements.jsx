@@ -2,10 +2,13 @@ import { achievements } from "../data.js";
 
 const Achievements = () => {
   return (
-    <div className="mt-16">
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+    <div className="mt-24 px-2 sm:px-6 md:px-8 lg:px-12 scroll-mt-14">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
         Certificates & <span className="text-violet-500">Badges</span>
       </h2>
+      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10">
+        Here are some Sertificates & badges that showcase my journey of learning and growth
+      </p>
 
       <div className="overflow-hidden relative">
         <div className="flex gap-6 animate-scroll">

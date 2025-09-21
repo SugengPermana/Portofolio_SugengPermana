@@ -11,6 +11,7 @@ export const listProyek = [
     id: 1,
     gambar: "/assets/proyek/projects1.png",
     nama: "Belanja",
+    tagline: "E-commerce Website",
     desk: "Management employee apps and attendance",
     tools: ["HTML", "CSS", "Javascript", "Node js"],
     live: "https://sugengpermana.github.io/Belanja.com/",
@@ -21,6 +22,7 @@ export const listProyek = [
     id: 2,
     gambar: "/assets/proyek/placeholder.png",
     nama: "Comming Soon...",
+    tagline: "Not Found",
     desk: "---",
     tools: ["Not Found"],
     live: "https://company-profile.example.com",
@@ -29,6 +31,24 @@ export const listProyek = [
   },
   // dst...
 ];
+
+// ===================== CONTACT INFORMATION =====================
+
+export const contactInfo = {
+  email: {
+    address: "sugengpermanadesembry@gmail.com",
+    mailto: "mailto:sugengpermanadesembry@gmail.com"
+  },
+  phone: {
+    number: "+62 882-9989-8410",
+    whatsapp: "https://wa.me/6288299898410"
+  },
+  location: {
+    full: "Bogor, Indonesia",
+    city: "Bogor",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bogor"
+  }
+};
 
 // ===================== SKILLS =====================
 
@@ -98,4 +118,3 @@ export const achievements = [
     imageUrl: "/assets/achivement/backend.png",
   },
 ];
-

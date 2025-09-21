@@ -6,7 +6,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50">
+<footer className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10">
       {/* Arrow Up */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
         <button
@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3 text-sm">
+      <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3 text-sm px-6">
         {/* Left: About */}
         <div>
           <h3 className="text-lg font-bold text-white">Sugeng Permana Desembry</h3>

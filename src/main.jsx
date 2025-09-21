@@ -27,7 +27,7 @@ function Main() {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto">
       <Navbar />
       <App />
       <Footer />

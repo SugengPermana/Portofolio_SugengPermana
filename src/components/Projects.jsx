@@ -44,10 +44,10 @@ const Projects = () => {
                 />
                 <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
-                    Not Found
+                    {project.tagline}
                   </span>
                 </div>
-                {/* Click indicator */}
+                {/* Click Indicator */}
                 <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-black/50 rounded-full p-2">
                     <i className="ri-eye-line text-white text-sm"></i>
@@ -107,7 +107,7 @@ const Projects = () => {
               {/* Close button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20"
+                className="absolute top-4 right-4 z-10 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer" 
               >
                 <i className="ri-close-line text-xl"></i>
               </button>
