@@ -3,7 +3,7 @@ import { achievements } from "../data.js";
 const Achievements = () => {
   return (
     <div className="mt-16">
-      <h2 className="text-center text-2xl sm:text-3xl font-bold text-white mb-6">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
         Certificates & <span className="text-violet-500">Badges</span>
       </h2>
 

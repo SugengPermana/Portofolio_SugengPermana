@@ -3,11 +3,16 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 const Contact = () => {
   return (
     <section id="contact" className="py-16 px-5 bg-zinc-900">
+      <div className="mt-16">
+      <h2 className="text-center text-4xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-white mb-6">
+        Get In <span className="text-violet-500">Touch</span>
+      </h2>
+      </div>
       <div className="max-w-screen-lg mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
         {/* Left Side - Contact Information */}
         <div className="flex flex-col justify-start h-full">
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
             Let's Connect
           </h2>
 
