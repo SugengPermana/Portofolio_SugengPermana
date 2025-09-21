@@ -19,7 +19,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    gambar: "",
+    gambar: "/assets/proyek/placeholder.png",
     nama: "Comming Soon...",
     desk: "---",
     tools: ["Not Found"],

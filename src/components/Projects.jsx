@@ -23,7 +23,7 @@ const Projects = () => {
       <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
         My <span className="text-violet-500">Projects</span>
       </h1>
-      <p className="text-base sm:text-lg text-center opacity-50 mb-10">
+      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10">
         Here are some of the projects where I applied my expertise to deliver functional and impactful solutions.
       </p>
 
@@ -44,7 +44,7 @@ const Projects = () => {
                 />
                 <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="inline-block px-3 py-1 bg-violet-500 text-white text-xs sm:text-sm rounded-full">
-                    Web Development
+                    Not Found
                   </span>
                 </div>
                 {/* Click indicator */}

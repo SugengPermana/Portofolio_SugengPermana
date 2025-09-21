@@ -9,8 +9,8 @@ const Skills = () => {
       <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white">
         My <span className="text-violet-500">Skills</span>
       </h1>
-      <p className="text-base sm:text-lg text-center opacity-50 mb-10">
-        Berikut beberapa tools dan teknologi yang saya kuasai
+      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10">
+        Tech and Design I use to build modern applications.
       </p>
 
       {/* Skills Grid */}

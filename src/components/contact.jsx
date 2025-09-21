@@ -17,7 +17,7 @@ const Contact = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed mb-8 flex-grow">
+          <p className="text-zinc-400 text-sm sm:text-base md:text-lg leading-relaxed mb-8 flex-grow">
             I'm always interested in hearing about new projects and opportunities.
             Whether you're a company looking to hire, or you're a fellow developer
             wanting to collaborate, I'd love to hear from you.
