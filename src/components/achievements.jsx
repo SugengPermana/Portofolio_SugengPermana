@@ -2,20 +2,20 @@ import { achievements } from "../data.js";
 
 const Achievements = () => {
   return (
-    <div className="mt-24 px-2 sm:px-6 md:px-8 lg:px-12 scroll-mt-14">
+    <div className="mt-24 px-2 sm:px-6 md:px-8 lg:px-12 scroll-mt-14" id="achievements">
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
         Certificates & <span className="text-violet-500">Badges</span>
       </h2>
-      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10">
+      <p className="text-base sm:text-lg text-center text-zinc-400 mb-10 max-w-2xl mx-auto">
         Here are some Sertificates & badges that showcase my journey of learning and growth
       </p>
 
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative px-2 sm:px-6 md:px-8 lg:px-8 xl:px16 mx-auto max-w-7xl">
         <div className="flex gap-6 animate-scroll">
           {achievements.concat(achievements).map((achv, i) => (
             <div
               key={i}
-              className="relative min-w-[200px] sm:min-w-[240px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group"
+              className="relative min-w-[250px] sm:min-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group"
             >
               {/* Image */}
               <a href={achv.link} target="_blank" rel="noopener noreferrer">
@@ -47,10 +47,9 @@ const Achievements = () => {
             </div>
           ))}
         </div>
-      </div>
 
       {/* Box Deskripsi */}
-      <div className="mt-12 from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600">
+      <div className="mt-12 from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600 ">
         <h3 className="text-3xl font-bold text-white mb-4">
           Keep Growing, Keep Building
         </h3>
@@ -74,6 +73,7 @@ const Achievements = () => {
         </div>
       </div>
     </div>
+      </div>
   );
 };
 

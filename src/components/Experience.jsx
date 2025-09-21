@@ -14,7 +14,7 @@ const Experience = () => {
               Work <span className="text-violet-500">Experience</span>
             </h2>
             <p
-              className="text-zinc-400 mt-3 text-base sm:text-lg"
+              className="text-zinc-400 mt-3 text-base sm:text-lg max-w-2xl mx-auto"
               data-aos="fade-up"
               data-aos-duration="2000"
               data-aos-once="true"
@@ -24,7 +24,7 @@ const Experience = () => {
           </div>
 
           {/* Timeline Wrapper */}
-          <div className="relative">
+          <div className="relative px-2 sm:px-6 lg:px-12 xl:px-24 mx-auto max-w-7xl">
             {/* Garis Timeline */}
             <div className="absolute top-0 left-4 md:left-1/2 md:-translate-x-1/2 h-full w-[2px] bg-violet-500"></div>
 

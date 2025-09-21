@@ -25,7 +25,7 @@ const About = () => {
           </div>
 
           {/* Konten Utama */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4 sm:px-6 lg:px-16 xl:px-24 mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-2 sm:px-6 lg:px-16 xl:px-24 mx-auto max-w-7xl">
             {/* Teks */}
             <div>
               <h3
@@ -81,13 +81,13 @@ const About = () => {
           </div>
 
           {/* Cards Statistik */}
-
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-16 xl:px-24">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 justify-items-center">
             {/* Card 1 */}
             <div
               className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
       transition transform hover:scale-105 hover:shadow-lg 
-      hover:shadow-violet-500/30 w-full max-w-[250px]"
+      hover:shadow-violet-500/30 w-full max-w-[300px]"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="1000"
@@ -108,7 +108,7 @@ const About = () => {
             <div
               className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
         transition transform hover:scale-105 hover:shadow-lg 
-        hover:shadow-violet-500/30 w-full max-w-[250px]"
+        hover:shadow-violet-500/30 w-full max-w-[300px]"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="1000"
@@ -129,7 +129,7 @@ const About = () => {
             <div
               className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
                   transition transform hover:scale-105 hover:shadow-lg 
-                  hover:shadow-violet-500/30 w-full max-w-[250px]"
+                  hover:shadow-violet-500/30 w-full max-w-[300px]"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="1000"
@@ -150,7 +150,7 @@ const About = () => {
             <div
               className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
                   transition transform hover:scale-105 hover:shadow-lg 
-                  hover:shadow-violet-500/30 w-full max-w-[250px]"
+                  hover:shadow-violet-500/30 w-full max-w-[300px]"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="1000"
@@ -169,6 +169,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

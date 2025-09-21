@@ -71,6 +71,15 @@ const Footer = () => {
             ].map((link, i) => (
               <li key={i}>
                 <a
+                onClick={() => {
+              const el = document.getElementById("about");
+              const navHeight =
+                document.querySelector(".navbar")?.offsetHeight || 100;
+              window.scrollTo({
+                top: el.offsetTop - navHeight,
+                behavior: "smooth",
+              });
+            }}
                   href={`#${link.toLowerCase()}`}
                   className="hover:text-violet-400 transition"
                 >
