@@ -12,7 +12,7 @@ export const listProyek = [
     gambar: "/assets/proyek/projects1.png",
     nama: "Belanja",
     tagline: "E-commerce Website",
-    desk: "Management employee apps and attendance",
+    desk: "Belanja is an Amazon inspired   e-commerce website that showcases clean product listings, a simulated shopping cart, and responsive design across devices. Built with HTML, CSS, and JavaScript, it demonstrates my ability to design, implement, and deploy a usable online store.",
     tools: ["HTML", "CSS", "Javascript", "Node js"],
     live: "https://sugengpermana.github.io/Belanja.com/",
     github: "https://github.com/SugengPermana/Belanja.com",

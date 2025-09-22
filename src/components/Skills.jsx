@@ -9,7 +9,7 @@ const Skills = () => {
       <h1
         className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="2000"
         data-aos-once="true"
       >
         My <span className="text-violet-500">Skills</span>

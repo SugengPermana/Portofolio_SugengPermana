@@ -117,115 +117,135 @@ const Projects = () => {
       </div>
 
       {/* Project Detail Modal */}
-      {isModalOpen && selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-zinc-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="relative">
-              {/* Close button */}
-              <button
-                onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-zinc-800 hover:bg-zinc-700 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer"
-              >
-                <i className="ri-close-line text-xl"></i>
-              </button>
+{isModalOpen && selectedProject && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className="bg-zinc-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+      <div className="relative flex flex-col h-[90vh]">
+        {/* Header (sticky navbar style) */}
+        <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-zinc-800/50 backdrop-blur-md border-b border-zinc-700">
+          <h2 className="text-xl sm:text-2xl font-bold text-white">
+            {selectedProject.nama}
+          </h2>
+          <button
+            onClick={closeModal}
+            className="bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer"
+          >
+            <i className="ri-close-line text-xl"></i>
+          </button>
+        </div>
 
-              {/* Project image */}
-              <div className="w-full h-64 sm:h-80 md:h-96">
-                <img
-                  src={selectedProject.gambar}
-                  alt={selectedProject.nama}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        {/* Scrollable content */}
+        <div
+          className="flex-1 overflow-y-auto overscroll-contain"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            overscrollBehavior: "contain",
+          }}
+        >
+          {/* Main project image */}
+          <div className="w-full h-64 sm:h-80 md:h-96">
+            <img
+              src={selectedProject.gambar}
+              alt={selectedProject.nama}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-              {/* Project details */}
-              <div className="p-6 sm:p-8">
-                <div className="flex flex-col lg:flex-row gap-8">
-                  {/* Left column - Project info */}
-                  <div className="flex-1">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                      {selectedProject.nama}
-                    </h2>
+          {/* Project details */}
+          <div className="p-6 sm:p-8 flex flex-col gap-8">
+            {/* Description */}
+            <p className="text-zinc-300 text-base sm:text-lg leading-relaxed">
+              {selectedProject.desk}
+            </p>
 
-                    <p className="text-zinc-300 mb-6 text-base sm:text-lg leading-relaxed">
-                      {selectedProject.desk}
-                    </p>
-
-                    {/* Duration */}
-                    <div className="mb-6">
-                      <h3 className="text-violet-400 font-semibold mb-2">
-                        Durasi Pengerjaan
-                      </h3>
-                      <p className="text-zinc-300">
-                        {selectedProject.dad} hari
-                      </p>
-                    </div>
-
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <h3 className="text-violet-400 font-semibold mb-3">
-                        Teknologi yang Digunakan
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedProject.tools.map((tool, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-zinc-800 text-violet-300 text-sm rounded-full border border-violet-500/30"
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Right column - Links */}
-                  <div className="lg:w-64">
-                    <h3 className="text-violet-400 font-semibold mb-4">
-                      Links
-                    </h3>
-                    <div className="space-y-3">
-                      <a
-                        href={selectedProject.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-4 bg-zinc-800 hover:bg-violet-600 text-white rounded-lg transition-all duration-300 group border border-violet-500/20 hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10"
-                      >
-                        <div className="p-2 bg-violet-600/20 rounded-lg group-hover:bg-violet-500/30 transition-colors duration-300">
-                          <i className="ri-external-link-line text-lg text-violet-400 group-hover:text-violet-300 group-hover:scale-110 transition-all duration-300"></i>
-                        </div>
-                        <div>
-                          <div className="font-semibold">Live Demo</div>
-                          <div className="text-sm text-zinc-400">
-                            Lihat project berjalan
-                          </div>
-                        </div>
-                      </a>
-
-                      <a
-                        href={selectedProject.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-all duration-300 group border border-zinc-600/30 hover:border-zinc-500/50 hover:shadow-lg hover:shadow-zinc-500/10"
-                      >
-                        <div className="p-2 bg-zinc-700/50 rounded-lg group-hover:bg-zinc-600/70 transition-colors duration-300">
-                          <i className="ri-github-line text-lg text-zinc-400 group-hover:text-zinc-300 group-hover:scale-110 transition-all duration-300"></i>
-                        </div>
-                        <div>
-                          <div className="font-semibold">Source Code</div>
-                          <div className="text-sm text-zinc-400">
-                            Lihat kode di Github
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+            {/* Additional images grid */}
+            <div>
+              <h3 className="text-violet-400 font-semibold mb-3">
+                Additional Images
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="bg-zinc-800 rounded-lg overflow-hidden aspect-video">
+                  <img
+                    src={selectedProject.gambar}
+                    alt={`${selectedProject.nama} screenshot`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
+                {/* tambahin map images kalau ada */}
+              </div>
+            </div>
+
+            {/* Duration */}
+            <div>
+              <h3 className="text-violet-400 font-semibold mb-2">
+                Duration Projects
+              </h3>
+              <p className="text-zinc-300">{selectedProject.dad} Days</p>
+            </div>
+
+            {/* Technologies */}
+            <div>
+              <h3 className="text-violet-400 font-semibold mb-3">
+                Technologies I Used
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.tools.map((tool, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-zinc-800 text-violet-300 text-sm rounded-full border border-violet-500/30"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Links */}
+            <div>
+              <h3 className="text-violet-400 font-semibold mb-4">Links</h3>
+              <div className="space-y-3">
+                {/* Live Demo */}
+                <a
+                  href={selectedProject.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-zinc-800 hover:bg-violet-600 text-white rounded-lg transition-all duration-300 group border border-violet-500/20 hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10"
+                >
+                  <div className="p-2 bg-violet-600/20 rounded-lg group-hover:bg-violet-500/30 transition-colors duration-300">
+                    <i className="ri-external-link-line text-lg text-violet-400 group-hover:text-violet-300 group-hover:scale-110 transition-all duration-300"></i>
+                  </div>
+                  <div>
+                    <div className="font-semibold">Live Demo</div>
+                    <div className="text-sm text-zinc-400">
+                      View the project
+                    </div>
+                  </div>
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-all duration-300 group border border-zinc-600/30 hover:border-zinc-500/50 hover:shadow-lg hover:shadow-zinc-500/10"
+                >
+                  <div className="p-2 bg-zinc-700/50 rounded-lg group-hover:bg-zinc-600/70 transition-colors duration-300">
+                    <i className="ri-github-line text-lg text-zinc-400 group-hover:text-zinc-300 group-hover:scale-110 transition-all duration-300"></i>
+                  </div>
+                  <div>
+                    <div className="font-semibold">Source Code</div>
+                    <div className="text-sm text-zinc-400">View on GitHub</div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

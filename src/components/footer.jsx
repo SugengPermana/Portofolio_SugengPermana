@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex gap-4 mt-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/sugengpermana"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-violet-400 transition"
@@ -44,7 +44,7 @@ const Footer = () => {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/sugengpermanadesembry"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-violet-400 transition"
@@ -52,7 +52,7 @@ const Footer = () => {
               <FaLinkedin size={20} />
             </a>
             <a
-              href="mailto:youremail@example.com"
+              href="mailto:sugengpermanadesembry@gmail.com"
               className="hover:text-violet-400 transition"
             >
               <FaEnvelope size={20} />
@@ -98,9 +98,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-white">Get in Touch</h3>
           <ul className="mt-3 space-y-2 text-zinc-400">
-            <li>Email: youremail@example.com</li>
-            <li>Phone: +62 812-3456-7890</li>
-            <li>Location: Jakarta, Indonesia</li>
+            <li>Email: sugengpermanadesembry@gmail.com</li>
+            <li>Phone: +62 882-9989-8410</li>
+            <li>Location: Bogor, Indonesia</li>
           </ul>
 
           <div className="mt-4">
