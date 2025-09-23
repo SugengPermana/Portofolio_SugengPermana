@@ -7,7 +7,7 @@ const About = () => {
           {/* Judul Section */}
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+              className="text-3xl sm:text-4xl lg:text-4xl font-bold text-white"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-once="true"
@@ -17,7 +17,7 @@ const About = () => {
             <p
               className="text-zinc-400 mt-3 text-base sm:text-lg"
               data-aos="fade-up"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
               data-aos-once="true"
             >
               Discover My Journey and What I Bring to the Table

@@ -7,7 +7,7 @@ const Skills = () => {
       className="skills mt-24 px-4 sm:px-6 md:px-8 lg:px-12 scroll-mt-12"
     >
       <h1
-        className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white"
+        className="text-center text-3xl sm:text-4xl lg:text-4xl font-bold mb-2 text-white"
         data-aos="fade-up"
         data-aos-duration="2000"
         data-aos-once="true"

@@ -19,7 +19,7 @@ const Contact = () => {
       {/* Title */}
       <div className="mt-16">
         <h2
-          className="text-center text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-white mb-2"
+          className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-2"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"

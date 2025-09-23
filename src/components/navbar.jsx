@@ -62,8 +62,8 @@ const Navbar = () => {
       {/* Container biar konten center */}
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="logo">
-          <h1 className="font-bold text-white text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl whitespace-nowrap">
+        <div className="logo cursor-pointer" onClick={() => scrollToSection("home")}>
+          <h1 className="font-bold text-white text-sm xs:text-base sm:text-base md:text-lg lg:text-lg whitespace-nowrap">
             <span className="block sm:hidden">Sugeng</span>
             <span className="hidden sm:block lg:hidden">Sugeng Permana</span>
             <span className="hidden lg:block">Sugeng Permana Desembry</span>
@@ -84,7 +84,7 @@ const Navbar = () => {
             <li key={sec}>
               <button
                 onClick={() => scrollToSection(sec)}
-                className={`hover:text-blue-400 capitalize ${
+                className={`cursor-pointer hover:text-blue-400 capitalize ${
                   activeSection === sec ? "text-blue-400" : ""
                 }`}
               >

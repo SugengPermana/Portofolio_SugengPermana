@@ -6,7 +6,7 @@ const Experience = () => {
           {/* Section Title */}
           <div className="text-center mb-14">
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+              className="text-3xl sm:text-4xl lg:text-4xl font-bold text-white"
               data-aos="fade-up"
               data-aos-duration="2000"
               data-aos-once="true"

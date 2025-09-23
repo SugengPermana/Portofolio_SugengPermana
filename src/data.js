@@ -9,10 +9,14 @@ export default Image;
 export const listProyek = [
   {
     id: 1,
-    gambar: "/assets/proyek/projects1.png",
+    images: [
+      "/assets/proyek/projects1.png",
+      "/assets/proyek/projects1-2.png",
+      "/assets/proyek/projects1-3.png"
+    ],
     nama: "Belanja",
     tagline: "E-commerce Website",
-    desk: "Belanja is an Amazon inspired   e-commerce website that showcases clean product listings, a simulated shopping cart, and responsive design across devices. Built with HTML, CSS, and JavaScript, it demonstrates my ability to design, implement, and deploy a usable online store.",
+    desk: "Belanja is an Amazon inspired e-commerce website that showcases clean product listings, a simulated shopping cart, and responsive design across devices. Built with HTML, CSS, and JavaScript, it demonstrates my ability to design, implement, and deploy a usable online store.",
     tools: ["HTML", "CSS", "Javascript", "Node js"],
     live: "https://sugengpermana.github.io/Belanja.com/",
     github: "https://github.com/SugengPermana/Belanja.com",
@@ -20,8 +24,8 @@ export const listProyek = [
   },
   {
     id: 2,
-    gambar: "/assets/proyek/placeholder.png",
-    nama: "Comming Soon...",
+    images: ["/assets/proyek/placeholder.png"],
+    nama: "Coming Soon...",
     tagline: "Not Found",
     desk: "---",
     tools: ["Not Found"],

@@ -7,7 +7,7 @@ const Achievements = () => {
       id="achievements"
     >
       <h2
-        className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2"
+        className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-2"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-once="true"
@@ -69,7 +69,7 @@ const Achievements = () => {
 
         {/* Box Deskripsi */}
         <div className="mt-12 from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 rounded-lg p-8 text-center shadow-lg mx-auto max-w-4xl border border-violet-600 ">
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Keep Growing, Keep Building
           </h3>
           <p className="text-zinc-400 mb-8 leading-relaxed">
@@ -81,15 +81,15 @@ const Achievements = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-blue-500 mb-2">7+</h1>
+              <h1 className="text-3xl font-bold text-blue-500 mb-2">7+</h1>
               <p className="text-zinc-400">Tools & Frameworks Explored</p>
             </div>
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-purple-500 mb-2">20+</h1>
+              <h1 className="text-3xl font-bold text-purple-500 mb-2">20+</h1>
               <p className="text-zinc-400">Courses Completed</p>
             </div>
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-green-500 mb-2">7+</h1>
+              <h1 className="text-3xl font-bold text-green-500 mb-2">7+</h1>
               <p className="text-zinc-400">month of Hands On Practice</p>
             </div>
           </div>
