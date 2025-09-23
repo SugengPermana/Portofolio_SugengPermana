@@ -20,7 +20,7 @@ const Preloader = () => {
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
-      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 text-center px-4">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 text-center px-4">
         Sugeng Permana Desembry
       </h1>
       <div role="status">
