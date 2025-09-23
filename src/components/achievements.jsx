@@ -1,6 +1,55 @@
+import { useState, useEffect } from "react";
 import { achievements } from "../data.js";
 
 const Achievements = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAnimationPaused, setIsAnimationPaused] = useState(false);
+
+  const openModal = (index) => {
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+    setIsAnimationPaused(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setIsAnimationPaused(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % achievements.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + achievements.length) % achievements.length
+    );
+  };
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (!isModalOpen) return;
+
+      switch (e.key) {
+        case "Escape":
+          closeModal();
+          break;
+        case "ArrowLeft":
+          prevImage();
+          break;
+        case "ArrowRight":
+          nextImage();
+          break;
+        default:
+          break;
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, [isModalOpen]);
+
   return (
     <div
       className="mt-24 px-2 sm:px-6 md:px-8 lg:px-12 scroll-mt-14"
@@ -30,20 +79,23 @@ const Achievements = () => {
         data-aos-duration="2000"
         data-aos-once="true"
       >
-        <div className="flex gap-6 animate-scroll">
-          {achievements.concat(achievements).map((achv, i) => (
+        <div
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-1"
+        >
+            {achievements.map((achv, i) => (
             <div
               key={i}
-              className="relative min-w-[250px] sm:min-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group"
+              className="relative min-w-[250px] sm:min-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group flex-shrink-0"
+              onClick={() => openModal(i % achievements.length)} // <-- pake klik
             >
               {/* Image */}
-              <a href={achv.link} target="_blank" rel="noopener noreferrer">
+              <div className="cursor-pointer relative z-10">
                 <img
                   src={achv.imageUrl}
                   alt={achv.title}
                   className="w-full h-32 sm:h-40 object-cover rounded-t-xl"
                 />
-              </a>
+              </div>
 
               {/* Overlay Content */}
               <div className="p-4 bg-zinc-800">
@@ -56,7 +108,7 @@ const Achievements = () => {
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl pointer-events-none">
                 <div className="text-white text-center">
                   <p className="text-sm font-bold">{achv.title}</p>
                   <p className="text-xs">{achv.issuer}</p>
@@ -95,6 +147,74 @@ const Achievements = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-w-5xl max-h-full w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute -top-12 right-0 text-white text-3xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+            >
+              ×
+            </button>
+
+            {/* Previous button */}
+            <button
+              onClick={prevImage}
+              className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
+            >
+              ‹
+            </button>
+
+            {/* Next button */}
+            <button
+              onClick={nextImage}
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
+            >
+              ›
+            </button>
+
+            {/* Image */}
+            <img
+              src={achievements[currentImageIndex].imageUrl}
+              alt={achievements[currentImageIndex].title}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl mx-auto block"
+            />
+
+            {/* Image info */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 rounded-b-lg backdrop-blur-sm">
+              <h3 className="text-lg font-bold">
+                {achievements[currentImageIndex].title}
+              </h3>
+              <p className="text-sm text-zinc-300">
+                {achievements[currentImageIndex].issuer} •{" "}
+                {achievements[currentImageIndex].year}
+              </p>
+              <a
+                href={achievements[currentImageIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-violet-400 hover:text-violet-300 text-sm transition-colors"
+              >
+                View Certificate →
+              </a>
+            </div>
+
+            {/* Image counter */}
+            <div className="absolute top-0 left-0 right-0 bg-black/80 text-white p-2 rounded-t-lg text-center text-sm">
+              {currentImageIndex + 1} of {achievements.length}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -3,6 +3,8 @@
 @layer base{
   body {
     font-family: "Poppins", sans-serif;
+    background-color: #f8fafc;
+    color: #333333;
   }
   html {
   scroll-behavior: smooth;
@@ -23,5 +25,5 @@
 
 .animate-scroll {
   display: flex;
-  animation: scroll-left 40s linear infinite; /* semakin besar durasi semakin lambat */
+  animation: scroll-left 20s linear infinite; /* dipercepat dari 40s ke 20s */
 }
