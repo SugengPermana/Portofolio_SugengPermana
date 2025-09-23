@@ -5,6 +5,29 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 100;
+
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - navbarHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Mapping display names to section IDs
+  const sectionMapping = {
+    "Home": "home",
+    "About": "about",
+    "Experience": "experience",
+    "Projects": "projects",
+    "Skills": "skills",
+    "Achievement": "achievements",
+    "Contact": "contact"
+  };
+
   return (
 <footer className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10"
       data-aos="fade-in"
@@ -75,16 +98,11 @@ const Footer = () => {
             ].map((link, i) => (
               <li key={i}>
                 <a
-                onClick={() => {
-              const el = document.getElementById("about");
-              const navHeight =
-                document.querySelector(".navbar")?.offsetHeight || 100;
-              window.scrollTo({
-                top: el.offsetTop - navHeight,
-                behavior: "smooth",
-              });
-            }}
-                  href={`#${link.toLowerCase()}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionMapping[link]);
+                  }}
+                  href={`#${sectionMapping[link]}`}
                   className="hover:text-violet-400 transition"
                 >
                   {link}

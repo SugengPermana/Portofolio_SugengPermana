@@ -169,7 +169,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button className="bg-violet-600 hover:bg-violet-700 transition p-2 lg:p-3 rounded-md font-semibold text-white text-sm sm:text-base mt-auto">
+            <button className="bg-violet-600 hover:bg-violet-700 transition p-2 lg:p-3 rounded-md font-semibold text-white text-sm sm:text-base mt-auto cursor-pointer">
               Send Message
             </button>
           </form>
