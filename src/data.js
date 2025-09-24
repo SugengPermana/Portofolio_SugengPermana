@@ -11,8 +11,6 @@ export const listProyek = [
     id: 1,
     images: [
       "/assets/proyek/projects1.png",
-      "/assets/proyek/projects1-2.png",
-      "/assets/proyek/projects1-3.png"
     ],
     nama: "Belanja",
     tagline: "E-commerce Website",
