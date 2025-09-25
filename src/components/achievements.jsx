@@ -85,7 +85,7 @@ const Achievements = () => {
             {achievements.map((achv, i) => (
             <div
               key={i}
-              className="relative min-w-[250px] sm:min-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group flex-shrink-0"
+              className="relative min-w-[250px] max-w-[250px] sm:min-w-[250px] sm:max-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group flex-shrink-0"
               onClick={() => openModal(i % achievements.length)} // <-- pake klik
             >
               {/* Image */}
@@ -155,42 +155,44 @@ const Achievements = () => {
           onClick={closeModal}
         >
           <div
-            className="relative max-w-5xl max-h-full w-full"
+            className="relative max-w-full md:max-w-4xl max-h-full w-full overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute -top-12 right-0 text-white text-3xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+              className="absolute top-2 right-2 text-white text-3xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
             >
               ×
             </button>
 
-            {/* Previous button */}
-            <button
-              onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
-            >
-              ‹
-            </button>
+            <div className="relative mx-auto inline-block">
+              {/* Previous button */}
+              <button
+                onClick={prevImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
+              >
+                ‹
+              </button>
 
-            {/* Next button */}
-            <button
-              onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
-            >
-              ›
-            </button>
+              {/* Next button */}
+              <button
+                onClick={nextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70"
+              >
+                ›
+              </button>
 
-            {/* Image */}
-            <img
-              src={achievements[currentImageIndex].imageUrl}
-              alt={achievements[currentImageIndex].title}
-              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl mx-auto block"
-            />
+              {/* Image */}
+              <img
+                src={achievements[currentImageIndex].imageUrl}
+                alt={achievements[currentImageIndex].title}
+                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl mx-auto block"
+              />
+            </div>
 
             {/* Image info */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 rounded-b-lg backdrop-blur-sm">
+            <div className=" left-0 right-0 bg-black/80 text-white p-4 rounded-b-lg backdrop-blur-sm">
               <h3 className="text-lg font-bold">
                 {achievements[currentImageIndex].title}
               </h3>
@@ -209,7 +211,7 @@ const Achievements = () => {
             </div>
 
             {/* Image counter */}
-            <div className="absolute top-0 left-0 right-0 bg-black/80 text-white p-2 rounded-t-lg text-center text-sm">
+            <div className=" left-0 right-0 text-violet-400 p-2 text-center text-sm">
               {currentImageIndex + 1} of {achievements.length}
             </div>
           </div>
