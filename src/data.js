@@ -60,16 +60,16 @@ export const skillCategories = [
     title: "Frontend Development",
     skills: [
       { id: "react", name: "React", percent: 85, color: "#61DAFB", logo: "/assets/tools/reactjs.png" },
-      { id: "nextjs", name: "Next.js", percent: 50, color: "#000000", logo: "/assets/tools/nextjs.png" },
+      { id: "nextjs", name: "Next.js", percent: 50, color: "#000000", logo: "/assets/tools/nextjs.webp" },
       { id: "tailwind", name: "TailwindCSS", percent: 85, color: "#BEF4FAFF", logo: "/assets/tools/tailwind.png" },
-      { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: "/assets/tools/js.png" },
+      { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: "/assets/tools/javascript.webp" },
     ],
   },
   {
     id: 2,
     title: "Backend Development",
     skills: [
-      { id: "node", name: "Node.js", percent: 80, color: "#08F508FF", logo: "/assets/tools/nodejs.png" },
+      { id: "node", name: "Node.js", percent: 80, color: "#08F508FF", logo: "/assets/tools/nodejs.webp" },
       { id: "php", name: "PHP", percent: 40, color: "#7BA2B9FF", logo: "/assets/tools/php.png" },
     ],
   },
@@ -77,18 +77,18 @@ export const skillCategories = [
     id: 3,
     title: "Tools & DevOps",
     skills: [
-      { id: "github", name: "Git & GitHub", percent: 90, color: "#030201FF", logo: "/assets/tools/github.png" },
+      { id: "github", name: "Git & GitHub", percent: 90, color: "#030201FF", logo: "/assets/tools/github.webp" },
       { id: "docker", name: "Docker", percent: 60, color: "#C5D2F4FF", logo: "/assets/tools/docker.png" },
       { id: "gcp", name: "Google Cloud", percent: 70, color: "#FDFDFDFF", logo: "/assets/tools/cloud.png" },
-      { id: "n8n", name: "N8N", percent: 60, color: "#F5D1D7FF", logo: "/assets/tools/n8n.png" },
+      { id: "n8n", name: "N8N", percent: 60, color: "#F5D1D7FF", logo: "/assets/tools/n8n.webp" },
     ],
   },
   {
     id: 4,
     title: "Design & Prototype",
     skills: [
-      { id: "figma", name: "Figma", percent: 70, color: "#F24E1E", logo: "/assets/tools/figma.png" },
-      { id: "canva", name: "Canva", percent: 70, color: "#00C4CC", logo: "/assets/tools/canva.png" },
+      { id: "figma", name: "Figma", percent: 70, color: "#F24E1E", logo: "/assets/tools/figma.webp" },
+      { id: "canva", name: "Canva", percent: 70, color: "#00C4CC", logo: "/assets/tools/canva.webp" },
       { id: "wordpress", name: "WordPress", percent: 40, color: "#FFFFFFFF", logo: "/assets/tools/wordpress.png" },
     ],
   },
