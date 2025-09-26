@@ -79,10 +79,8 @@ const Achievements = () => {
         data-aos-duration="2000"
         data-aos-once="true"
       >
-        <div
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-1"
-        >
-            {achievements.map((achv, i) => (
+        <div className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-1">
+          {achievements.map((achv, i) => (
             <div
               key={i}
               className="relative min-w-[250px] max-w-[250px] sm:min-w-[250px] sm:max-w-[250px] bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:scale-105 transition duration-300 group flex-shrink-0"
@@ -149,81 +147,78 @@ const Achievements = () => {
       </div>
 
       {/* Modal */}
-{isModalOpen && (
-  <div
-    className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 lg:p-0"
-    onClick={closeModal}
-  >
-    <div
-      className="relative w-full h-screen overflow-y-auto flex flex-col items-center"
-      onClick={(e) => e.stopPropagation()}
-    >
-      {/* Close button (fixed) */}
-      <button
-        onClick={closeModal}
-        className="absolute top-4 right-4 text-white text-3xl hover:text-violet-400 transition-colors z-50 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
-      >
-        ×
-      </button>
-
-      {/* Konten modal */}
-      <div className="relative flex flex-col items-center justify-center w-full mt-12 mb-6 px-2">
-        {/* Navigation + Image */}
-        <div className="relative flex items-center justify-center w-full">
-          {/* Prev */}
-          <button
-            onClick={prevImage}
-            className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-black/70"
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 lg:p-0"
+          onClick={closeModal}
+        >
+          <div
+            className="relative w-full h-screen overflow-y-auto flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
           >
-            ‹
-          </button>
+            {/* Close button (fixed) */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white text-3xl hover:text-violet-400 transition-colors z-50 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
+            >
+              ×
+            </button>
 
-          {/* Next */}
-          <button
-            onClick={nextImage}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-black/70"
-          >
-            ›
-          </button>
+            {/* Konten modal */}
+            <div className="relative flex flex-col items-center justify-center w-full mt-12 mb-6 px-2">
+              {/* Navigation + Image */}
+              <div className="relative flex items-center justify-center w-full">
+                {/* Prev */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-black/70"
+                >
+                  ‹
+                </button>
 
-          {/* Image */}
-          <img
-            src={achievements[currentImageIndex].imageUrl}
-            alt={achievements[currentImageIndex].title}
-            className="w-auto max-w-full max-h-[60vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl mx-auto"
-          />
+                {/* Next */}
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-violet-400 transition-colors z-20 bg-black/50 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:bg-black/70"
+                >
+                  ›
+                </button>
+
+                {/* Image */}
+                <img
+                  src={achievements[currentImageIndex].imageUrl}
+                  alt={achievements[currentImageIndex].title}
+                  className="w-auto max-w-full max-h-[60vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl mx-auto"
+                />
+              </div>
+
+              {/* Info */}
+              <div className="mt-4 bg-black/80 text-white p-4 rounded-lg backdrop-blur-sm max-w-md w-full text-center">
+                <h3 className="text-base sm:text-lg font-bold">
+                  {achievements[currentImageIndex].title}
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-300">
+                  {achievements[currentImageIndex].issuer} •{" "}
+                  {achievements[currentImageIndex].year}
+                </p>
+                <a
+                  href={achievements[currentImageIndex].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 text-violet-400 hover:text-violet-300 text-xs sm:text-sm transition-colors"
+                >
+                  View Certificate →
+                </a>
+              </div>
+
+              {/* Counter */}
+              <div className="text-violet-400 p-2 text-center text-xs sm:text-sm">
+                {currentImageIndex + 1} of {achievements.length}
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Info */}
-        <div className="mt-4 bg-black/80 text-white p-4 rounded-lg backdrop-blur-sm max-w-md w-full text-center">
-          <h3 className="text-base sm:text-lg font-bold">
-            {achievements[currentImageIndex].title}
-          </h3>
-          <p className="text-xs sm:text-sm text-zinc-300">
-            {achievements[currentImageIndex].issuer} •{" "}
-            {achievements[currentImageIndex].year}
-          </p>
-          <a
-            href={achievements[currentImageIndex].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 text-violet-400 hover:text-violet-300 text-xs sm:text-sm transition-colors"
-          >
-            View Certificate →
-          </a>
-        </div>
-
-        {/* Counter */}
-        <div className="text-violet-400 p-2 text-center text-xs sm:text-sm">
-          {currentImageIndex + 1} of {achievements.length}
-        </div>
-      </div>
-    </div>
-  </div>
-)}
-
-
-
+      )}
     </div>
   );
 };

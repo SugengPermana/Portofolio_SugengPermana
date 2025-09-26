@@ -3,7 +3,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Contact from "./components/contact";
 import Achievements from "./components/achievements";
 
 function App() {

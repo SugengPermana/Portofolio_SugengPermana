@@ -43,7 +43,11 @@ const About = () => {
                 data-aos-duration="2000"
                 data-aos-once="true"
               >
-                I&apos;m passionate about building modern, responsive, and scalable web applications. Beyond the frontend, I have practical experience with Node.js for backend development, workflow automation using N8n, and managing cloud environments through Cloud Console.
+                I&apos;m passionate about building modern, responsive, and
+                scalable web applications. Beyond the frontend, I have practical
+                experience with Node.js for backend development, workflow
+                automation using N8n, and managing cloud environments through
+                Cloud Console.
               </p>
 
               <h4
@@ -60,7 +64,9 @@ const About = () => {
                 data-aos-duration="2000"
                 data-aos-once="true"
               >
-                specialize in modern frameworks like React, Next.js, and Tailwind CSS to create seamless digital experiences across devices.
+                specialize in modern frameworks like React, Next.js, and
+                Tailwind CSS to create seamless digital experiences across
+                devices.
               </p>
             </div>
 
@@ -82,94 +88,94 @@ const About = () => {
 
           {/* Cards Statistik */}
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-16 xl:px-24">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 justify-items-center">
-            {/* Card 1 */}
-            <div
-              className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 justify-items-center">
+              {/* Card 1 */}
+              <div
+                className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
       transition transform hover:scale-105 hover:shadow-lg 
       hover:shadow-violet-500/30 w-full max-w-[300px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              data-aos-once="true"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
-                  <i className="ri-timer-fill text-white text-2xl"></i>
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-once="true"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+                    <i className="ri-timer-fill text-white text-2xl"></i>
+                  </div>
                 </div>
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  7<span className="text-violet-500">+</span>
+                </h1>
+                <p className="text-zinc-400">Month Experience</p>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                7<span className="text-violet-500">+</span>
-              </h1>
-              <p className="text-zinc-400">Month Experience</p>
-            </div>
 
-            {/* Card 2 */}
-            <div
-              className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+              {/* Card 2 */}
+              <div
+                className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
         transition transform hover:scale-105 hover:shadow-lg 
         hover:shadow-violet-500/30 w-full max-w-[300px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              data-aos-once="true"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
-                  <i className="ri-focus-2-line text-white text-2xl"></i>
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-once="true"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+                    <i className="ri-focus-2-line text-white text-2xl"></i>
+                  </div>
                 </div>
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  3<span className="text-violet-500">+</span>
+                </h1>
+                <p className="text-zinc-400">Projects Completed</p>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                3<span className="text-violet-500">+</span>
-              </h1>
-              <p className="text-zinc-400">Projects Completed</p>
-            </div>
 
-            {/* Card 3 */}
-            <div
-              className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+              {/* Card 3 */}
+              <div
+                className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
                   transition transform hover:scale-105 hover:shadow-lg 
                   hover:shadow-violet-500/30 w-full max-w-[300px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              data-aos-once="true"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
-                  <i className="ri-stack-fill text-white text-2xl"></i>
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-once="true"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+                    <i className="ri-stack-fill text-white text-2xl"></i>
+                  </div>
                 </div>
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  5<span className="text-violet-500">+</span>
+                </h1>
+                <p className="text-zinc-400">Technologies Mastered</p>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                5<span className="text-violet-500">+</span>
-              </h1>
-              <p className="text-zinc-400">Technologies Mastered</p>
-            </div>
 
-            {/* Card 4 */}
-            <div
-              className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
+              {/* Card 4 */}
+              <div
+                className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
                   transition transform hover:scale-105 hover:shadow-lg 
                   hover:shadow-violet-500/30 w-full max-w-[300px]"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-              data-aos-once="true"
-            >
-              <div className="flex justify-center mb-4">
-                <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
-                  <i className="ri-user-fill text-white text-2xl"></i>
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-once="true"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="bg-violet-600 w-14 h-14 flex items-center justify-center rounded-full">
+                    <i className="ri-user-fill text-white text-2xl"></i>
+                  </div>
                 </div>
+                <h1 className="text-3xl font-bold text-white mb-2">
+                  1<span className="text-violet-500">+</span>
+                </h1>
+                <p className="text-zinc-400">Clients Worked With</p>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                1<span className="text-violet-500">+</span>
-              </h1>
-              <p className="text-zinc-400">Clients Worked With</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

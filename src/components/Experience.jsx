@@ -19,7 +19,8 @@ const Experience = () => {
               data-aos-duration="2000"
               data-aos-once="true"
             >
-              Highlights of my journey where I've applied my skills and projects i have worked on
+              Highlights of my journey where I've applied my skills and projects
+              i have worked on
             </p>
           </div>
 
@@ -79,7 +80,12 @@ const Experience = () => {
 
                   {/* Description */}
                   <p className="text-zinc-300 mt-2 text-sm sm:text-base">
-                  Working as a freelance developer, I design and build responsive web applications using React and Tailwind CSS, while also leveraging N8n to automate workflows and streamline business processes. My role spans from crafting clean UIs to optimizing performance and deploying reliable solutions.
+                    Working as a freelance developer, I design and build
+                    responsive web applications using React and Tailwind CSS,
+                    while also leveraging N8n to automate workflows and
+                    streamline business processes. My role spans from crafting
+                    clean UIs to optimizing performance and deploying reliable
+                    solutions.
                   </p>
 
                   {/* Key Achievements */}
@@ -89,9 +95,15 @@ const Experience = () => {
                     </h4>
                     <ul className="list-disc list-inside text-zinc-300 text-sm sm:text-base">
                       <li>
-                        Developed responsive web applications with React and Tailwind CSS, improving load times and user experience across devices.
+                        Developed responsive web applications with React and
+                        Tailwind CSS, improving load times and user experience
+                        across devices.
                       </li>
-                      <li>Implemented workflow automation with N8n, cutting down manual tasks and saving clients an average of 10+ hours per week.</li>
+                      <li>
+                        Implemented workflow automation with N8n, cutting down
+                        manual tasks and saving clients an average of 10+ hours
+                        per week.
+                      </li>
                     </ul>
                   </div>
 
@@ -144,7 +156,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

@@ -56,7 +56,11 @@ const Projects = () => {
             >
               <div className="relative w-full h-44 sm:h-52 md:h-56 overflow-hidden">
                 <img
-                  src={project.images && project.images.length > 0 ? project.images[0] : "/assets/proyek/projects1.png"}
+                  src={
+                    project.images && project.images.length > 0
+                      ? project.images[0]
+                      : "/assets/proyek/projects1.png"
+                  }
                   alt={project.nama}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -118,99 +122,102 @@ const Projects = () => {
       </div>
 
       {/* Project Detail Modal */}
-{isModalOpen && selectedProject && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-    <div className="bg-zinc-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
-      <div className="relative flex flex-col h-[90vh]">
-        {/* Header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-zinc-800/50 backdrop-blur-md border-b border-zinc-700">
-          <h2 className="text-xl sm:text-2xl font-bold text-white">
-            {selectedProject.nama}
-          </h2>
-          <button
-            onClick={closeModal}
-            className="bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer"
-          >
-            <i className="ri-close-line text-xl"></i>
-          </button>
-        </div>
-
-        {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain">
-          {/* === Image Carousel === */}
-          <Carousel images={selectedProject.images} />
-
-          {/* Project details */}
-          <div className="p-6 sm:p-8 flex flex-col gap-8">
-            {/* About This Project */}
-            <div>
-              <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent font-semibold mb-3 text-lg lg:text-2xl">
-                About This Project
-              </h3>
-              <p className="text-slate-300 text-base sm:text-lg lg:text-lg leading-relaxed">
-                {selectedProject.desk}
-              </p>
-            </div>
-
-            {/* Duration */}
-            <div>
-              <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent lg:text-2xl font-semibold mb-2">
-                Duration Projects
-              </h3>
-              <p className="text-slate-300 lg:text-lg">{selectedProject.dad} Days</p>
-            </div>
-
-            {/* Technologies */}
-            <div>
-              <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent lg:text-2xl font-semibold mb-3">
-                Technologies I Used
-              </h3>
-              <div className="flex flex-wrap gap-2 text">
-                {selectedProject.tools.map((tool, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-zinc-800 text-emerald-300 text-sm rounded-full border border-emerald-500/30 lg:text-lg"
-                  >
-                    {tool}
-                  </span>
-                ))}
+      {isModalOpen && selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-zinc-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div className="relative flex flex-col h-[90vh]">
+              {/* Header */}
+              <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-zinc-800/50 backdrop-blur-md border-b border-zinc-700">
+                <h2 className="text-xl sm:text-2xl font-bold text-white">
+                  {selectedProject.nama}
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="bg-zinc-700 hover:bg-zinc-600 text-white rounded-full p-2 transition-all duration-300 border border-zinc-600/50 hover:border-zinc-500/70 hover:shadow-lg hover:shadow-zinc-500/20 cursor-pointer"
+                >
+                  <i className="ri-close-line text-xl"></i>
+                </button>
               </div>
-            </div>
 
-            {/* Links */}
-            <div>
-              <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent font-semibold mb-6 lg:text-2xl">Links</h3>
-              <div className="flex flex-col gap-4">
-                {/* Live Demo */}
-                <a
-                  href={selectedProject.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-500 hover:to-violet-400 text-white rounded-lg transition-all duration-300 group border border-violet-500/30 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/20 w-full"
-                >
-                  <i className="ri-external-link-line text-lg text-violet-200 group-hover:text-violet-100"></i>
-                  <span>View Live Demo</span>
-                </a>
+              {/* Scrollable content */}
+              <div className="flex-1 overflow-y-auto overscroll-contain">
+                {/* === Image Carousel === */}
+                <Carousel images={selectedProject.images} />
 
-                {/* GitHub */}
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 p-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-all duration-300 group border border-zinc-600/30 hover:border-zinc-500/50 hover:shadow-lg hover:shadow-zinc-500/10 w-full"
-                >
-                  <i className="ri-github-line text-lg text-zinc-400 group-hover:text-zinc-300"></i>
-                  <span>Source Code</span>
-                </a>
+                {/* Project details */}
+                <div className="p-6 sm:p-8 flex flex-col gap-8">
+                  {/* About This Project */}
+                  <div>
+                    <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent font-semibold mb-3 text-lg lg:text-2xl">
+                      About This Project
+                    </h3>
+                    <p className="text-slate-300 text-base sm:text-lg lg:text-lg leading-relaxed">
+                      {selectedProject.desk}
+                    </p>
+                  </div>
+
+                  {/* Duration */}
+                  <div>
+                    <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent lg:text-2xl font-semibold mb-2">
+                      Duration Projects
+                    </h3>
+                    <p className="text-slate-300 lg:text-lg">
+                      {selectedProject.dad} Days
+                    </p>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent lg:text-2xl font-semibold mb-3">
+                      Technologies I Used
+                    </h3>
+                    <div className="flex flex-wrap gap-2 text">
+                      {selectedProject.tools.map((tool, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-zinc-800 text-emerald-300 text-sm rounded-full border border-emerald-500/30 lg:text-lg"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Links */}
+                  <div>
+                    <h3 className="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent font-semibold mb-6 lg:text-2xl">
+                      Links
+                    </h3>
+                    <div className="flex flex-col gap-4">
+                      {/* Live Demo */}
+                      <a
+                        href={selectedProject.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 p-4 bg-gradient-to-r from-violet-600 to-violet-500 hover:from-violet-500 hover:to-violet-400 text-white rounded-lg transition-all duration-300 group border border-violet-500/30 hover:border-violet-400/50 hover:shadow-lg hover:shadow-violet-500/20 w-full"
+                      >
+                        <i className="ri-external-link-line text-lg text-violet-200 group-hover:text-violet-100"></i>
+                        <span>View Live Demo</span>
+                      </a>
+
+                      {/* GitHub */}
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 p-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg transition-all duration-300 group border border-zinc-600/30 hover:border-zinc-500/50 hover:shadow-lg hover:shadow-zinc-500/10 w-full"
+                      >
+                        <i className="ri-github-line text-lg text-zinc-400 group-hover:text-zinc-300"></i>
+                        <span>Source Code</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
-
+      )}
     </div>
   );
 };

@@ -95,10 +95,11 @@ const Home = () => {
         </div>
 
         {/* Sosial Media */}
-        <div className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl text-zinc-400"
-        data-aos="fade-in"
-        data-aos-duration="2000"
-        data-aos-once="true"
+        <div
+          className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl text-zinc-400"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+          data-aos-once="true"
         >
           <a
             href="https://www.linkedin.com/in/sugengpermanadesembry"
@@ -133,15 +134,15 @@ const Home = () => {
         </div>
         {/* Arrow animasi */}
         <a
-        onClick={() => {
-              const el = document.getElementById("about");
-              const navHeight =
-                document.querySelector(".navbar")?.offsetHeight || 100;
-              window.scrollTo({
-                top: el.offsetTop - navHeight,
-                behavior: "smooth",
-              });
-            }}
+          onClick={() => {
+            const el = document.getElementById("about");
+            const navHeight =
+              document.querySelector(".navbar")?.offsetHeight || 100;
+            window.scrollTo({
+              top: el.offsetTop - navHeight,
+              behavior: "smooth",
+            });
+          }}
           className="mt-10 text-3xl font-bold bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent animate-bounce"
         >
           <i className="ri-arrow-down-s-line"></i>

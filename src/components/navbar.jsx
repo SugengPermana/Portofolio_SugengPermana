@@ -62,7 +62,10 @@ const Navbar = () => {
       {/* Container biar konten center */}
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="logo cursor-pointer" onClick={() => scrollToSection("home")}>
+        <div
+          className="logo cursor-pointer"
+          onClick={() => scrollToSection("home")}
+        >
           <h1 className="font-bold text-white text-sm xs:text-base sm:text-base md:text-lg lg:text-lg whitespace-nowrap">
             <span className="block sm:hidden">Sugeng</span>
             <span className="hidden sm:block lg:hidden">Sugeng Permana</span>

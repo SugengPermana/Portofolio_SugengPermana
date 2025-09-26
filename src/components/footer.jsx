@@ -19,21 +19,22 @@ const Footer = () => {
 
   // Mapping display names to section IDs
   const sectionMapping = {
-    "Home": "home",
-    "About": "about",
-    "Experience": "experience",
-    "Projects": "projects",
-    "Skills": "skills",
-    "Achievement": "achievements",
-    "Contact": "contact"
+    Home: "home",
+    About: "about",
+    Experience: "experience",
+    Projects: "projects",
+    Skills: "skills",
+    Achievement: "achievements",
+    Contact: "contact",
   };
 
   return (
-<footer className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10"
+    <footer
+      className="relative left-0 right-0 w-full bg-gradient-to-br from-slate-900 via-zinc-900 to-slate-900 text-zinc-300 px-6 py-12 mt-16 border-t border-zinc-700/50 z-10"
       data-aos="fade-in"
       data-aos-duration="2000"
-      data-aos-once="true">
-
+      data-aos-once="true"
+    >
       {/* Arrow Up */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
         <button
@@ -50,10 +51,12 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-3 text-sm px-6">
         {/* Left: About */}
         <div>
-          <h3 className="text-lg font-bold text-white">Sugeng Permana Desembry</h3>
+          <h3 className="text-lg font-bold text-white">
+            Sugeng Permana Desembry
+          </h3>
           <p className="mt-3 text-zinc-400">
-            A passionate learner and builder, combining technology, creativity, and
-            innovation to deliver impactful solutions.
+            A passionate learner and builder, combining technology, creativity,
+            and innovation to deliver impactful solutions.
           </p>
 
           {/* Social Icons */}
@@ -123,14 +126,17 @@ const Footer = () => {
 
           <div className="mt-4">
             <h4 className="font-semibold text-white">Available For:</h4>
-            <p className="text-zinc-400">Freelance, Remote Work, Collaboration</p>
+            <p className="text-zinc-400">
+              Freelance, Remote Work, Collaboration
+            </p>
           </div>
         </div>
       </div>
 
       {/* Bottom copyright */}
       <div className="mt-12 text-center text-xs text-zinc-500">
-        © {new Date().getFullYear()} Sugeng Permana Desembry. All rights reserved.
+        © {new Date().getFullYear()} Sugeng Permana Desembry. All rights
+        reserved.
       </div>
     </footer>
   );
