@@ -1,1 +1,3 @@
-- [x] Adjust modal max-width to fit tall images better on tablet and laptop
+- [x] Revert layout to horizontal scroll as per user feedback
+- [x] Fix modal image to be centered and not too big: add max-w-4xl to image, keep object-contain and vertical scroll
+- [x] Ensure modal and hover effects remain functional
