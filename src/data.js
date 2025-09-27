@@ -10,7 +10,9 @@ export const listProyek = [
   {
     id: 1,
     images: [
-      "/assets/proyek/projects1.png",
+      "/assets/proyek/projects-1.0.png",
+      "/assets/proyek/projects-1.1.webp",
+      "/assets/proyek/projects-1.2.webp",
     ],
     nama: "Belanja",
     tagline: "E-commerce Website",

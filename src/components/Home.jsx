@@ -3,11 +3,7 @@ import Image from "../data.js";
 
 const Home = () => {
   // list kata yang mau ditampilkan bergantian
-  const texts = [
-    "Front-End Engineer",
-    "Workflow Automation",
-    "Cloud Engineer",
-  ];
+  const texts = ["Front-End Engineer", "Workflow Automation", "Cloud Engineer"];
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0); // index teks aktif
@@ -18,10 +14,7 @@ const Home = () => {
   useEffect(() => {
     if (index === texts.length) return; // stop kalau sudah habis (atau bisa diulang nanti)
 
-    if (
-      subIndex === texts[index].length + 1 && 
-      !deleting
-    ) {
+    if (subIndex === texts[index].length + 1 && !deleting) {
       // berhenti sebentar setelah selesai ketik
       setTimeout(() => setDeleting(true), 1500);
       return;
