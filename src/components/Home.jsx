@@ -1,6 +1,50 @@
+import { useState, useEffect } from "react";
 import Image from "../data.js";
 
 const Home = () => {
+  // list kata yang mau ditampilkan bergantian
+  const texts = [
+    "Front-End Engineer",
+    "Workflow Automation",
+    "Cloud Engineer",
+  ];
+
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0); // index teks aktif
+  const [subIndex, setSubIndex] = useState(0); // posisi karakter
+  const [deleting, setDeleting] = useState(false); // mode hapus / ketik
+  const [speed, setSpeed] = useState(50); // kecepatan ketik/hapus
+
+  useEffect(() => {
+    if (index === texts.length) return; // stop kalau sudah habis (atau bisa diulang nanti)
+
+    if (
+      subIndex === texts[index].length + 1 && 
+      !deleting
+    ) {
+      // berhenti sebentar setelah selesai ketik
+      setTimeout(() => setDeleting(true), 1500);
+      return;
+    }
+
+    if (subIndex === 0 && deleting) {
+      // pindah ke teks berikutnya setelah hapus semua
+      setDeleting(false);
+      setIndex((prev) => (prev + 1) % texts.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (deleting ? -1 : 1));
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, deleting]);
+
+  useEffect(() => {
+    setText(texts[index].substring(0, subIndex));
+  }, [subIndex, index]);
+
   return (
     <div>
       <div
@@ -28,14 +72,15 @@ const Home = () => {
           Hi, I&apos;m <span className="text-violet-500">Sugeng</span>
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle dengan efek ketik-hapus */}
         <h2
           className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl font-medium text-zinc-400 mb-4 flex items-center justify-center gap-1"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
         >
-          Front-End Engineer & Workflow Automation
+          <span>{text}</span>
+          <span className="animate-pulse">|</span>
         </h2>
 
         {/* Deskripsi */}
