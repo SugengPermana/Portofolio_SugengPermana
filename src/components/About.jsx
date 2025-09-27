@@ -1,4 +1,5 @@
 import Image from "../data.js";
+
 const About = () => {
   return (
     <div>
@@ -64,10 +65,25 @@ const About = () => {
                 data-aos-duration="2000"
                 data-aos-once="true"
               >
-                specialize in modern frameworks like React, Next.js, and
+                I specialize in modern frameworks like React, Next.js, and
                 Tailwind CSS to create seamless digital experiences across
                 devices.
               </p>
+
+              {/* Tombol Download CV */}
+              <div className="mt-6">
+                <a
+                  href="/assets/CV-Sugeng-Permana-Desembry.pdf"
+                  download
+                  className="inline-block px-6 py-3 bg-violet-700 text-white font-medium rounded-full 
+                  transition transform hover:scale-105 hover:shadow-lg"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-once="true"
+                >
+                  Download CV
+                </a>
+              </div>
             </div>
 
             {/* Foto */}
@@ -92,8 +108,8 @@ const About = () => {
               {/* Card 1 */}
               <div
                 className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
-      transition transform hover:scale-105 hover:shadow-lg 
-      hover:shadow-violet-500/30 w-full max-w-[300px]"
+                transition transform hover:scale-105 hover:shadow-lg 
+                hover:shadow-violet-500/30 w-full max-w-[300px]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1000"
@@ -113,8 +129,8 @@ const About = () => {
               {/* Card 2 */}
               <div
                 className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
-        transition transform hover:scale-105 hover:shadow-lg 
-        hover:shadow-violet-500/30 w-full max-w-[300px]"
+                transition transform hover:scale-105 hover:shadow-lg 
+                hover:shadow-violet-500/30 w-full max-w-[300px]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1000"
@@ -134,8 +150,8 @@ const About = () => {
               {/* Card 3 */}
               <div
                 className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
-                  transition transform hover:scale-105 hover:shadow-lg 
-                  hover:shadow-violet-500/30 w-full max-w-[300px]"
+                transition transform hover:scale-105 hover:shadow-lg 
+                hover:shadow-violet-500/30 w-full max-w-[300px]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1000"
@@ -155,8 +171,8 @@ const About = () => {
               {/* Card 4 */}
               <div
                 className="p-6 md:p-8 rounded-xl text-center border border-violet-600 
-                  transition transform hover:scale-105 hover:shadow-lg 
-                  hover:shadow-violet-500/30 w-full max-w-[300px]"
+                transition transform hover:scale-105 hover:shadow-lg 
+                hover:shadow-violet-500/30 w-full max-w-[300px]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="1000"

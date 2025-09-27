@@ -1,3 +1,0 @@
--fitur sub judul home ketik animasi
--fitur preloader animasi
--fitur Donwload Cv
