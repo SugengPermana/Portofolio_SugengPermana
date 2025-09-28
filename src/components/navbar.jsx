@@ -27,7 +27,7 @@ const Navbar = () => {
         "experience",
         "projects",
         "skills",
-        "achievements", // ✅ ganti dari cb → achievements
+        "achievements",
         "contact",
       ];
       const scrollPos = window.scrollY + 150;

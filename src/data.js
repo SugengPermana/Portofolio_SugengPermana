@@ -1,7 +1,7 @@
 // src/data.js
 
 const Image = {
-  HeroImage: "/assets/hero-foto-img3.jpg",
+  HeroImage: "/Portofolio_SugengPermana/assets/hero-foto-img3.jpg",
 };
 
 export default Image;
@@ -10,9 +10,9 @@ export const listProyek = [
   {
     id: 1,
     images: [
-      "/assets/proyek/projects-1.0.png",
-      "/assets/proyek/projects-1.1.webp",
-      "/assets/proyek/projects-1.2.webp",
+      "/Portofolio_SugengPermana/assets/proyek/projects-1.0.png",
+      "/Portofolio_SugengPermana/assets/proyek/projects-1.1.webp",
+      "/Portofolio_SugengPermana/assets/proyek/projects-1.2.webp",
     ],
     nama: "Belanja",
     tagline: "E-commerce Website",
