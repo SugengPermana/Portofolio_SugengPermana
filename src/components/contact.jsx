@@ -152,17 +152,20 @@ const Contact = () => {
           >
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="p-2 lg:p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700"
               required
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
               className="p-2 lg:p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700"
               required
             />
             <textarea
+              name="message"
               placeholder="Your Message"
               rows="10"
               className="p-2 lg:p-3 rounded-md bg-zinc-900 text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-violet-600 border border-zinc-700 resize-none flex-1"
