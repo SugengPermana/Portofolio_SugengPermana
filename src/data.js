@@ -1,7 +1,8 @@
 // src/data.js
+const base = import.meta.env.BASE_URL;
 
 const Image = {
-  HeroImage: "/Portofolio_SugengPermana/assets/hero-foto-img3.jpg",
+  HeroImage: `${base}/assets/hero-foto-img3.jpg`,
 };
 
 export default Image;
@@ -10,9 +11,9 @@ export const listProyek = [
   {
     id: 1,
     images: [
-      "/Portofolio_SugengPermana/assets/proyek/projects-1.0.png",
-      "/Portofolio_SugengPermana/assets/proyek/projects-1.1.webp",
-      "/Portofolio_SugengPermana/assets/proyek/projects-1.2.webp",
+      `${base}assets/proyek/projects-1.0.png`,
+      `${base}assets/proyek/projects-1.1.webp`,
+      `${base}assets/proyek/projects-1.2.webp`,
     ],
     nama: "Belanja",
     tagline: "E-commerce Website",
@@ -24,7 +25,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    images: ["/assets/proyek/placeholder.png"],
+    images: [`${base}assets/proyek/placeholder.png`],
     nama: "Coming Soon...",
     tagline: "Not Found",
     desk: "---",
@@ -33,11 +34,9 @@ export const listProyek = [
     github: "https://github.com/username/company-profile",
     dad: "-",
   },
-  // dst...
 ];
 
 // ===================== CONTACT INFORMATION =====================
-
 export const contactInfo = {
   email: {
     address: "sugengpermanadesembry@gmail.com",
@@ -55,47 +54,47 @@ export const contactInfo = {
 };
 
 // ===================== SKILLS =====================
-
 export const skillCategories = [
   {
     id: 1,
     title: "Frontend Development",
     skills: [
-      { id: "react", name: "React", percent: 85, color: "#61DAFB", logo: "/assets/tools/reactjs.png" },
-      { id: "nextjs", name: "Next.js", percent: 50, color: "#000000", logo: "/assets/tools/nextjs.webp" },
-      { id: "tailwind", name: "TailwindCSS", percent: 85, color: "#BEF4FAFF", logo: "/assets/tools/tailwind.png" },
-      { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: "/assets/tools/javascript.webp" },
+      { id: "react", name: "React", percent: 85, color: "#61DAFB", logo: `${base}assets/tools/reactjs.png` },
+      { id: "nextjs", name: "Next.js", percent: 50, color: "#000000", logo: `${base}assets/tools/nextjs.webp` },
+      { id: "tailwind", name: "TailwindCSS", percent: 85, color: "#BEF4FAFF", logo: `${base}assets/tools/tailwind.png` },
+      { id: "javascript", name: "JavaScript", percent: 85, color: "#F7DF1E", logo: `${base}assets/tools/javascript.webp` },
     ],
   },
   {
     id: 2,
     title: "Backend Development",
     skills: [
-      { id: "node", name: "Node.js", percent: 80, color: "#08F508FF", logo: "/assets/tools/nodejs.webp" },
-      { id: "php", name: "PHP", percent: 40, color: "#7BA2B9FF", logo: "/assets/tools/php.png" },
+      { id: "node", name: "Node.js", percent: 80, color: "#08F508FF", logo: `${base}assets/tools/nodejs.webp` },
+      { id: "php", name: "PHP", percent: 40, color: "#7BA2B9FF", logo: `${base}assets/tools/php.png` },
     ],
   },
   {
     id: 3,
     title: "Tools & DevOps",
     skills: [
-      { id: "github", name: "Git & GitHub", percent: 90, color: "#030201FF", logo: "/assets/tools/github.webp" },
-      { id: "docker", name: "Docker", percent: 60, color: "#C5D2F4FF", logo: "/assets/tools/docker.png" },
-      { id: "gcp", name: "Google Cloud", percent: 70, color: "#FDFDFDFF", logo: "/assets/tools/cloud.png" },
-      { id: "n8n", name: "N8N", percent: 60, color: "#F5D1D7FF", logo: "/assets/tools/n8n.webp" },
+      { id: "github", name: "Git & GitHub", percent: 90, color: "#030201FF", logo: `${base}assets/tools/github.webp` },
+      { id: "docker", name: "Docker", percent: 60, color: "#C5D2F4FF", logo: `${base}assets/tools/docker.png` },
+      { id: "gcp", name: "Google Cloud", percent: 70, color: "#FDFDFDFF", logo: `${base}assets/tools/cloud.png` },
+      { id: "n8n", name: "N8N", percent: 60, color: "#F5D1D7FF", logo: `${base}assets/tools/n8n.webp` },
     ],
   },
   {
     id: 4,
     title: "Design & Prototype",
     skills: [
-      { id: "figma", name: "Figma", percent: 70, color: "#F24E1E", logo: "/assets/tools/figma.webp" },
-      { id: "canva", name: "Canva", percent: 70, color: "#00C4CC", logo: "/assets/tools/canva.webp" },
-      { id: "wordpress", name: "WordPress", percent: 40, color: "#FFFFFFFF", logo: "/assets/tools/wordpress.png" },
+      { id: "figma", name: "Figma", percent: 70, color: "#F24E1E", logo: `${base}assets/tools/figma.webp` },
+      { id: "canva", name: "Canva", percent: 70, color: "#00C4CC", logo: `${base}assets/tools/canva.webp` },
+      { id: "wordpress", name: "WordPress", percent: 40, color: "#FFFFFFFF", logo: `${base}assets/tools/wordpress.png` },
     ],
   },
 ];
 
+// ===================== ACHIEVEMENTS =====================
 export const achievements = [
   {
     id: 1,
@@ -103,7 +102,7 @@ export const achievements = [
     issuer: "Dicoding",
     year: "2025",
     link: "https://drive.google.com/file/d/1TzcDstvB8Fy90rWmJVcufHdbu25h9Ysm/view",
-    imageUrl: "/assets/achivement/dasar-cloud.webp",
+    imageUrl: `${base}assets/achivement/dasar-cloud.webp`,
   },
   {
     id: 2,
@@ -111,7 +110,7 @@ export const achievements = [
     issuer: "Dicoding",
     year: "2025",
     link: "https://drive.google.com/file/d/1oeHQHQO3-sdKc0yrfDGLSGS-1XkyDWVu/view",
-    imageUrl: "/assets/achivement/javascript.webp",
+    imageUrl: `${base}assets/achivement/javascript.webp`,
   },
   {
     id: 3,
@@ -119,7 +118,7 @@ export const achievements = [
     issuer: "Dicoding",
     year: "2025",
     link: "https://drive.google.com/file/d/1zE26IRVzk7S5tv7wb4SEuvUKmvojFQSp/view",
-    imageUrl: "/assets/achivement/backend.webp",
+    imageUrl: `${base}assets/achivement/backend.webp`,
   },
   {
     id: 4,
@@ -127,7 +126,7 @@ export const achievements = [
     issuer: "Dicoding",
     year: "2025",
     link: "https://drive.google.com/file/d/1hMA6defEJ3M3q-btFu2s5TXwlbGP4eDh/view",
-    imageUrl: "/assets/achivement/ai-praktis.webp",
+    imageUrl: `${base}assets/achivement/ai-praktis.webp`,
   },
   {
     id: 5,
@@ -135,7 +134,7 @@ export const achievements = [
     issuer: "Dicoding",
     year: "2025",
     link: "https://drive.google.com/file/d/1BLJnPlVHNVVgeH8k6NVgVUXguZLz7V1Z/view",
-    imageUrl: "/assets/achivement/python.webp",
+    imageUrl: `${base}assets/achivement/python.webp`,
   },
   {
     id: 6,
@@ -143,7 +142,7 @@ export const achievements = [
     issuer: "Cisco Networking Academy",
     year: "2025",
     link: "https://drive.google.com/file/d/1R55M_-hIURFuEht3agVFsfYppoq71nN4/view",
-    imageUrl: "/assets/achivement/intro-cyber.webp",
+    imageUrl: `${base}assets/achivement/intro-cyber.webp`,
   },
   {
     id: 7,
@@ -151,7 +150,7 @@ export const achievements = [
     issuer: "DigiTalent Schoolarship",
     year: "2025",
     link: "https://drive.google.com/file/d/1Hz5advWJWFV3iPjDWUZJO9yWR_weNbxi/view",
-    imageUrl: "/assets/achivement/web-dev.webp",
+    imageUrl: `${base}/assets/achivement/web-dev.webp`,
   },
   {
     id: 8,
@@ -159,7 +158,7 @@ export const achievements = [
     issuer: "DqLab",
     year: "2025",
     link: "https://drive.google.com/file/d/1IiYe7kHJPQJa2R28cAQKfU_PHugneO15/view",
-    imageUrl: "/assets/achivement/r-data.webp",
+    imageUrl: `${base}/assets/achivement/r-data.webp`,
   },
   {
     id: 9,
@@ -167,7 +166,7 @@ export const achievements = [
     issuer: "DqLab",
     year: "2025",
     link: "https://drive.google.com/file/d/181NTLE4tII4f_1DrHLHGW_zpZSjZ-7H7/view",
-    imageUrl: "/assets/achivement/r-ai.webp",
+    imageUrl: `${base}/assets/achivement/r-ai.webp`,
   },
   {
     id: 10,
@@ -175,7 +174,7 @@ export const achievements = [
     issuer: "DQLab",
     year: "2025",
     link: "https://drive.google.com/file/d/1b4Rk760qTI5-0Q2Icht3hRDekF39Fb4f/view",
-    imageUrl: "/assets/achivement/intro-r.webp",
+    imageUrl: `${base}/assets/achivement/intro-r.webp`,
   },
   {
     id: 11,
@@ -183,7 +182,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17934726",
-    imageUrl: "/assets/achivement/aug.webp",
+    imageUrl: `${base}/assets/achivement/aug.webp`,
   },
   {
     id: 12,
@@ -191,7 +190,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18215001",
-    imageUrl: "/assets/achivement/sep.webp",
+    imageUrl: `${base}/assets/achivement/sep.webp`,
   },
   {
     id: 13,
@@ -199,7 +198,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18033960",
-    imageUrl: "/assets/achivement/week1.webp",
+    imageUrl: `${base}/assets/achivement/week1.webp`,
   },
   {
     id: 14,
@@ -207,7 +206,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18036153",
-    imageUrl: "/assets/achivement/week2.webp",
+    imageUrl: `${base}/assets/achivement/week2.webp`,
   },
   {
     id: 15,
@@ -215,7 +214,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18063323",
-    imageUrl: "/assets/achivement/week3.webp",
+    imageUrl: `${base}/assets/achivement/week3.webp`,
   },
   {
     id: 16,
@@ -223,7 +222,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18083877",
-    imageUrl: "/assets/achivement/week4.webp",
+    imageUrl: `${base}/assets/achivement/week4.webp`,
   },
   {
     id: 17,
@@ -231,7 +230,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17980465",
-    imageUrl: "/assets/achivement/gemini.webp",
+    imageUrl: `${base}/assets/achivement/gemini.webp`,
   },
   {
     id: 18,
@@ -239,7 +238,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17102920",
-    imageUrl: "/assets/achivement/generative.webp",
+    imageUrl: `${base}/assets/achivement/generative.webp`,
   },
   {
     id: 19,
@@ -247,7 +246,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17981862",
-    imageUrl: "/assets/achivement/workspace.webp",
+    imageUrl: `${base}/assets/achivement/workspace.webp`,
   },
   {
     id: 20,
@@ -255,6 +254,6 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18212641",
-    imageUrl: "/assets/achivement/cyber.webp",
+    imageUrl: `${base}/assets/achivement/cyber.webp`,
   },
 ];
