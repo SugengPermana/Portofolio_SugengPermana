@@ -36,7 +36,7 @@ export const listProyek = [
     tools: ["React", "TailwindCSS", "Vite", "node js"],
     live: "https://sugengpermana.github.io/Portofolio_SugengPermana/",
     github: "https://github.com/SugengPermana/Portofolio_SugengPermana",
-    dad: "-",
+    dad: "23",
   },
 ];
 
