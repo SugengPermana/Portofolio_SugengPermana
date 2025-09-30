@@ -2,7 +2,7 @@
 const base = import.meta.env.BASE_URL;
 
 const Image = {
-  HeroImage: `${base}/assets/hero-foto-img3.jpg`,
+  HeroImage: `${base}assets/hero-foto-img3.jpg`,
 };
 
 export default Image;
