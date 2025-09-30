@@ -73,7 +73,7 @@ const About = () => {
               {/* Tombol Download CV */}
               <div className="mt-6">
                 <a
-                  href="/assets/"
+                  href="/assets/Cv-Sugeng-Permana-Desembry.pdf"
                   download="Cv-Sugeng-Permana-Desembry.pdf"
                   className="inline-block px-6 py-3 bg-violet-700 text-white font-medium rounded-full 
                   transition transform hover:scale-105 hover:shadow-lg"
