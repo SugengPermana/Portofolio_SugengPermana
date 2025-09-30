@@ -135,7 +135,7 @@ const Home = () => {
         {/* Sosial Media */}
         <div
           className="flex gap-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl text-zinc-400"
-          data-aos="fade-in"
+          data-aos="fade-up"
           data-aos-duration="2000"
           data-aos-once="true"
         >
