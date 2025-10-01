@@ -154,7 +154,7 @@ export const achievements = [
     issuer: "DigiTalent Schoolarship",
     year: "2025",
     link: "https://drive.google.com/file/d/1Hz5advWJWFV3iPjDWUZJO9yWR_weNbxi/view",
-    imageUrl: `${base}/assets/achivement/web-dev.webp`,
+    imageUrl: `${base}assets/achivement/web-dev.webp`,
   },
   {
     id: 8,
@@ -162,7 +162,7 @@ export const achievements = [
     issuer: "DqLab",
     year: "2025",
     link: "https://drive.google.com/file/d/1IiYe7kHJPQJa2R28cAQKfU_PHugneO15/view",
-    imageUrl: `${base}/assets/achivement/r-data.webp`,
+    imageUrl: `${base}assets/achivement/r-data.webp`,
   },
   {
     id: 9,
@@ -170,7 +170,7 @@ export const achievements = [
     issuer: "DqLab",
     year: "2025",
     link: "https://drive.google.com/file/d/181NTLE4tII4f_1DrHLHGW_zpZSjZ-7H7/view",
-    imageUrl: `${base}/assets/achivement/r-ai.webp`,
+    imageUrl: `${base}assets/achivement/r-ai.webp`,
   },
   {
     id: 10,
@@ -178,7 +178,7 @@ export const achievements = [
     issuer: "DQLab",
     year: "2025",
     link: "https://drive.google.com/file/d/1b4Rk760qTI5-0Q2Icht3hRDekF39Fb4f/view",
-    imageUrl: `${base}/assets/achivement/intro-r.webp`,
+    imageUrl: `${base}assets/achivement/intro-r.webp`,
   },
   {
     id: 11,
@@ -186,7 +186,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17934726",
-    imageUrl: `${base}/assets/achivement/aug.webp`,
+    imageUrl: `${base}assets/achivement/aug.webp`,
   },
   {
     id: 12,
@@ -194,7 +194,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18215001",
-    imageUrl: `${base}/assets/achivement/sep.webp`,
+    imageUrl: `${base}assets/achivement/sep.webp`,
   },
   {
     id: 13,
@@ -202,7 +202,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18033960",
-    imageUrl: `${base}/assets/achivement/week1.webp`,
+    imageUrl: `${base}assets/achivement/week1.webp`,
   },
   {
     id: 14,
@@ -210,7 +210,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18036153",
-    imageUrl: `${base}/assets/achivement/week2.webp`,
+    imageUrl: `${base}assets/achivement/week2.webp`,
   },
   {
     id: 15,
@@ -218,7 +218,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18063323",
-    imageUrl: `${base}/assets/achivement/week3.webp`,
+    imageUrl: `${base}assets/achivement/week3.webp`,
   },
   {
     id: 16,
@@ -226,7 +226,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18083877",
-    imageUrl: `${base}/assets/achivement/week4.webp`,
+    imageUrl: `${base}assets/achivement/week4.webp`,
   },
   {
     id: 17,
@@ -234,7 +234,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17980465",
-    imageUrl: `${base}/assets/achivement/gemini.webp`,
+    imageUrl: `${base}assets/achivement/gemini.webp`,
   },
   {
     id: 18,
@@ -242,7 +242,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17102920",
-    imageUrl: `${base}/assets/achivement/generative.webp`,
+    imageUrl: `${base}assets/achivement/generative.webp`,
   },
   {
     id: 19,
@@ -250,7 +250,7 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/17981862",
-    imageUrl: `${base}/assets/achivement/workspace.webp`,
+    imageUrl: `${base}assets/achivement/workspace.webp`,
   },
   {
     id: 20,
@@ -258,6 +258,6 @@ export const achievements = [
     issuer: "Google Skill Boost",
     year: "2025",
     link: "https://www.cloudskillsboost.google/public_profiles/83950568-42ba-48b6-bfdb-e53cc3af5965/badges/18212641",
-    imageUrl: `${base}/assets/achivement/cyber.webp`,
+    imageUrl: `${base}assets/achivement/cyber.webp`,
   },
 ];
