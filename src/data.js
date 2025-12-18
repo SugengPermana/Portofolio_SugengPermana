@@ -38,6 +38,21 @@ export const listProyek = [
     github: "https://github.com/SugengPermana/Portofolio_SugengPermana",
     dad: "23",
   },
+  {
+    id: 3,
+    images: [
+      `${base}assets/proyek/projects-2.0.webp`,
+      `${base}assets/proyek/projects-2.1.webp`,
+      `${base}assets/proyek/projects-2.2.webp`
+    ],
+    nama: "Personal Portofolio",
+    tagline: "Portfolio Website",
+    desk: "A personal portfolio website built with React and TailwindCSS, showcasing my projects, skills, and contact information. It features a modern design, responsive layout, and smooth navigation to effectively present my professional profile.",
+    tools: ["React", "TailwindCSS", "Vite", "node js"],
+    live: "https://sugengpermana.github.io/Portofolio_SugengPermana/",
+    github: "https://github.com/SugengPermana/Portofolio_SugengPermana",
+    dad: "23",
+  },
 ];
 
 // ===================== CONTACT INFORMATION =====================
