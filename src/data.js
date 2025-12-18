@@ -41,13 +41,13 @@ export const listProyek = [
   {
     id: 3,
     images: [
-      `${base}assets/proyek/projects-2.0.webp`,
-      `${base}assets/proyek/projects-2.1.webp`,
-      `${base}assets/proyek/projects-2.2.webp`
+      `${base}assets/proyek/hero-book3.jpg`,
+      `${base}assets/proyek/hero-book2.jpg`,
+      `${base}assets/proyek/hero-book.jpg`
     ],
     nama: "Booking Hotel",
     tagline: "booking hotel",
-    desk: "A personal portfolio website built with React and TailwindCSS, showcasing my projects, skills, and contact information. It features a modern design, responsive layout, and smooth navigation to effectively present my professional profile.",
+    desk: "A Booking hotel can reserve and book, easy book, and clean design",
     tools: ["React", "TailwindCSS", "Vite", "node js"],
     live: "",
     github: "https://github.com/SugengPermana/villa-plus",
