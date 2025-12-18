@@ -49,8 +49,8 @@ export const listProyek = [
     tagline: "booking hotel",
     desk: "A personal portfolio website built with React and TailwindCSS, showcasing my projects, skills, and contact information. It features a modern design, responsive layout, and smooth navigation to effectively present my professional profile.",
     tools: ["React", "TailwindCSS", "Vite", "node js"],
-    live: "https://sugengpermana.github.io/Portofolio_SugengPermana/",
-    github: "https://github.com/SugengPermana/Portofolio_SugengPermana",
+    live: "",
+    github: "https://github.com/SugengPermana/villa-plus",
     dad: "23",
   },
 ];
