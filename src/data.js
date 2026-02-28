@@ -42,7 +42,7 @@ export const listProyek = [
     id: 3,
     images: [
       `${base}assets/proyek/hero-book3.jpg`,
-      `${base}assets/proyek/hero-book2.jpg`,
+      `${base}assets/proyek/hero-book2.png`,
       `${base}assets/proyek/hero-book.jpg`
     ],
     nama: "Booking Hotel",
